@@ -1,0 +1,92 @@
+/* ========================= */
+/*  SIDE MENU WAVE ANIMATION */
+/* ========================= */
+
+@keyframes ellipseOpen {
+  0% {
+    clip-path: ellipse(0% 50% at 100% 50%);
+  }
+  88% {
+    clip-path: ellipse(120% 90% at 50% 50%);
+  }
+}
+
+@keyframes ellipseClose {
+  0% {
+    clip-path: ellipse(120% 90% at 50% 50%);
+  }
+  100% {
+    clip-path: ellipse(0% 50% at 110% 50%);
+  }
+}
+
+.openWave {
+  animation: ellipseOpen 1s ease forwards;
+}
+
+.closeWave {
+  animation: ellipseClose 1s ease forwards;
+}
+
+/* ========================= */
+/*     TEXT SLIDE ANIMATION  */
+/* ========================= */
+
+@keyframes textSlideIn {
+  0% { transform: translateX(150%); opacity: 1; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes textSlideOut {
+  0% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(150%); opacity: 1; }
+}
+
+.textIn {
+  animation: textSlideIn 0.65s cubic-bezier(0.25, 0.8, 0.3, 1) forwards;
+}
+
+.textOut {
+  animation: textSlideOut 0.65s cubic-bezier(0.25, 0.8, 0.3, 1) forwards;
+}
+
+/* --- POP IN --- */
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-pop {
+  animation: pop 0.35s ease-out forwards;
+}
+
+
+/* --- POP OUT (reverse) --- */
+@keyframes de-pop {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  40% {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+
+.animate-depop {
+  animation: de-pop 0.25s ease-in forwards;
+}
