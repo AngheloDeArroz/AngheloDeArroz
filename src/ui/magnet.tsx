@@ -16,8 +16,10 @@ const Magnet: React.FC<MagnetProps> = ({
   padding = 100,
   disabled = false,
   magnetStrength = 2,
-  activeTransition = 'transform 0.3s ease-out',
-  inactiveTransition = 'transform 0.5s ease-in-out',
+  // UPDATE 1: Make active transition almost instant so it sticks to mouse
+  activeTransition = 'transform 0.1s ease-out',
+  // UPDATE 2: Use a "spring" bezier curve for the bounce back
+  inactiveTransition = 'transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275)', 
   wrapperClassName = '',
   innerClassName = '',
   ...props
