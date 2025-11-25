@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // --- Font Awesome Icons (Brands) ---
@@ -33,55 +33,51 @@ const TECH_ICONS = [
 ];
 
 const AboutSection: React.FC = () => {
+    // Refs for Marquee (Marquee logic remains unchanged)
     const marqueeRef = useRef<HTMLDivElement>(null);
     const requestRef = useRef<number>(0);
-    
-    // Marquee state refs
     const position = useRef(0);
-    const direction = useRef(1); // 1: Left-to-Right (Scroll Up), -1: Right-to-Left (Scroll Down)
-    
-    // Speed state refs
-    const normalSpeed = 1;      
-    const scrollBoost = 3;      
+    const direction = useRef(1);
+    const normalSpeed = 1;
+    const scrollBoost = 3;
     const speed = useRef(normalSpeed);
-    
-    // Scroll detection refs
     const lastScrollY = useRef(0);
     const scrollTimeout = useRef<NodeJS.Timeout | null>(null);
 
+    // Refs and State for Text Animation
+    const headlineRef = useRef<HTMLDivElement>(null);
+    const descriptionRef = useRef<HTMLDivElement>(null);
+    const [isHeadlineVisible, setIsHeadlineVisible] = useState(false);
+    const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
+    
+    // Flag to track animation status
+    const hasAnimatedUp = useRef(false); 
+    // Ref to track the current scroll direction
+    const scrollDirection = useRef<'up' | 'down'>('down'); 
+
+    // --- MARQUEE & SCROLL DIRECTION LOGIC ---
     useEffect(() => {
-        
-        // Function to set the correct initial position
         const initializePosition = () => {
             if (marqueeRef.current) {
                 const width = marqueeRef.current.scrollWidth / 2; 
-                // Initialize position to the start of the duplicate content (-width)
                 position.current = -width;
             }
         };
 
         const animate = () => {
             if (marqueeRef.current) {
-                // Total width of one set of icons
                 const width = marqueeRef.current.scrollWidth / 2; 
-
-                // 1. Update position based on speed and direction
                 position.current += speed.current * direction.current;
 
-                // 2. Loop Logic: Seamless Reset
-                if (direction.current === 1) { // Moving Left-to-Right (Scroll Up)
-                    // If the entire track has moved right past the start point (0), reset it
+                if (direction.current === 1) { 
                     if (position.current > 0) {
                         position.current -= width; 
                     }
-                } else { // Moving Right-to-Left (Scroll Down)
-                    // If the track has moved left past the duplicate content (-width), reset it
+                } else {
                     if (position.current < -width) {
                         position.current += width; 
                     }
                 }
-                
-                // 3. Apply transformation
                 marqueeRef.current.style.transform = `translateX(${position.current}px)`;
             }
             requestRef.current = requestAnimationFrame(animate);
@@ -89,16 +85,10 @@ const AboutSection: React.FC = () => {
 
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
-            
-            // 1. Determine Direction
-            // Scroll Up (current < last) -> positive direction (LTR)
-            // Scroll Down (current > last) -> negative direction (RTL)
             direction.current = currentScrollY < lastScrollY.current ? 1 : -1; 
-            
-            // 2. Apply Speed Boost
+            scrollDirection.current = currentScrollY > lastScrollY.current ? 'down' : 'up';
             speed.current = scrollBoost;
 
-            // 3. Reset Speed after a short delay
             if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
             scrollTimeout.current = setTimeout(() => { 
                 speed.current = normalSpeed; 
@@ -107,18 +97,11 @@ const AboutSection: React.FC = () => {
             lastScrollY.current = currentScrollY;
         };
         
-        // --- SETUP ---
-        // Initialize position on mount/resize
         initializePosition();
         window.addEventListener("resize", initializePosition);
-        
-        // Start the animation loop
         requestRef.current = requestAnimationFrame(animate);
-        
-        // Add scroll listener
         window.addEventListener("scroll", handleScroll, { passive: true });
         
-        // --- CLEANUP ---
         return () => {
             cancelAnimationFrame(requestRef.current);
             window.removeEventListener("scroll", handleScroll);
@@ -127,6 +110,75 @@ const AboutSection: React.FC = () => {
         };
     }, []);
 
+    useEffect(() => {
+        // Use a single observer instance
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    const target = entry.target;
+                    
+                    if (entry.isIntersecting) {
+                        // 1. ANIMATION/SKIP LOGIC (When entering the viewport)
+                        
+                        // Condition A: Scroll UP and NOT animated yet -> Animate
+                        if (scrollDirection.current === 'up' && !hasAnimatedUp.current) {
+                            if (target === headlineRef.current) {
+                                setIsHeadlineVisible(true);
+                            } else if (target === descriptionRef.current) {
+                                // Staggered animation
+                                setTimeout(() => setIsDescriptionVisible(true), 300);
+                            }
+                        } 
+                        // Condition B: Scroll DOWN or already animated (flag is true) -> Skip animation, set visible instantly
+                        else if (scrollDirection.current === 'down' || hasAnimatedUp.current) {
+                            if (target === headlineRef.current) {
+                                setIsHeadlineVisible(true);
+                            } else if (target === descriptionRef.current) {
+                                setIsDescriptionVisible(true);
+                            }
+                        }
+                    
+                    } else {
+
+                        if (entry.boundingClientRect.top >= window.innerHeight) {
+                            
+                            // Reset state and flag
+                            if (hasAnimatedUp.current) {
+                                hasAnimatedUp.current = false;
+                                setIsHeadlineVisible(false);
+                                setIsDescriptionVisible(false);
+                                
+                                // Re-observe the elements
+                                if (headlineRef.current) observer.observe(headlineRef.current);
+                                if (descriptionRef.current) observer.observe(descriptionRef.current);
+                            }
+                        }
+                    }
+                });
+            },
+            {
+                root: null, // viewport
+                threshold: 0.1, 
+            }
+        );
+
+        if (isHeadlineVisible && isDescriptionVisible && !hasAnimatedUp.current) {
+            hasAnimatedUp.current = true;
+        }
+
+        // Start observing both elements
+        if (headlineRef.current) observer.observe(headlineRef.current);
+        if (descriptionRef.current) observer.observe(descriptionRef.current);
+
+        return () => {
+            // Cleanup observers
+            if (headlineRef.current) observer.unobserve(headlineRef.current);
+            if (descriptionRef.current) observer.unobserve(descriptionRef.current);
+        };
+    }, [isHeadlineVisible, isDescriptionVisible]); // Depend on visibility states to lock the flag
+
+    // Ensure the scroll direction update logic runs consistently
+    // (This is already handled in the Marquee useEffect, but we keep it clean)
 
     return (
         <section id="about" className="py-24 bg-white">
@@ -134,16 +186,26 @@ const AboutSection: React.FC = () => {
             <div className="max-w-5xl mx-auto px-8 lg:px-16">
                 <div className="flex flex-col md:flex-row justify-between gap-10">
 
-                    {/* Headline Column */}
-                    <div className="md:w-7/12">
+                    {/* Headline Column - Controlled by visibility state */}
+                    <div 
+                        ref={headlineRef} 
+                        className={`md:w-7/12 transition-all duration-1000 ease-out 
+                            ${isHeadlineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`
+                        }
+                    >
                         <p className="text-xl sm:text-2xl lg:text-3xl font-bold leading-snug text-gray-900">
                             Dedicated to excellence. Expertise across full-stack development
                             and network architecture.
                         </p>
                     </div>
 
-                    {/* Description Column */}
-                    <div className="md:w-4/12 flex items-start pt-2">
+                    {/* Description Column - Controlled by visibility state */}
+                    <div 
+                        ref={descriptionRef} 
+                        className={`md:w-4/12 flex items-start pt-2 transition-all duration-1000 ease-out 
+                            ${isDescriptionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`
+                        }
+                    >
                         <p className="text-sm text-gray-700 leading-relaxed text-justify">
                             I am a student of Information Technology specializing in Network Technology.
                             I am a full-stack developer experienced in software, app, and web development.
@@ -171,7 +233,6 @@ const AboutSection: React.FC = () => {
                         {[...TECH_ICONS, ...TECH_ICONS].map((item, i) => (
                             <div
                                 key={i}
-                                // Hover and Transition classes applied here
                                 className="flex flex-col items-center justify-center p-4 mx-10 transition duration-500 hover:scale-110 hover:-translate-y-1 hover:drop-shadow-lg"
                                 style={{ width: "100px", flexShrink: 0 }} 
                             >
