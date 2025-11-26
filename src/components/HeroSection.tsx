@@ -9,27 +9,23 @@ const HeroSection = () => {
   const marqueeRef = useRef<HTMLDivElement>(null);
   const navbarRef = useRef<HTMLDivElement>(null);
 
+  // Refs for desktop links used for the magnet effect and rendering
   const aboutRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
+  // Marquee/Animation Refs and Variables
   const requestRef = useRef<number>(0);
   const position = useRef(0);
   const direction = useRef(1);
-  const normalSpeed = 1.5;
+  const normalSpeed = 2;
   const speed = useRef(normalSpeed);
   const lastScrollY = useRef(0);
   const scrollTimeout = useRef<NodeJS.Timeout | null>(null);
 
-  const [mounted, setMounted] = useState(false);
-  const [showBurger, setShowBurger] = useState(false);
+  // State Variables
   const [menuOpen, setMenuOpen] = useState(false);
-  const [hasToggled, setHasToggled] = useState(false);
-  const [hasPopped, setHasPopped] = useState(false);
-
   const [activeSection, setActiveSection] = useState("home");
-  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
-
   const [closestMagnet, setClosestMagnet] = useState<string | null>(null);
 
   const desktopLinks = [
@@ -38,21 +34,10 @@ const HeroSection = () => {
     { id: "desktop-contact", label: "Contact", href: "#contact", ref: contactRef },
   ];
 
-  const mobileNavItems = [
-    { id: "home", label: "Home", href: "#home", delay: "0.12s" },
-    { id: "about", label: "About", href: "#about", delay: "0.15s" },
-    { id: "projects", label: "Projects", href: "#projects", delay: "0.18s" },
-    { id: "contact", label: "Contact", href: "#contact", delay: "0.21s" },
-  ];
-
   const toggleMenu = () => {
-    setHasToggled(true);
+    // Removed setHasToggled(true) as hasToggled is unused
     setMenuOpen((prev) => !prev);
   };
-
-  useEffect(() => {
-    if (showBurger || menuOpen) setHasPopped(true);
-  }, [showBurger, menuOpen]);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -95,6 +80,7 @@ const HeroSection = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
+  // Intersection Observer: Updates active section on scroll
   useEffect(() => {
     const sections = ["home", "about", "projects", "contact"];
     const observer = new IntersectionObserver(
@@ -112,23 +98,14 @@ const HeroSection = () => {
     return () => observer.disconnect();
   }, []);
 
-  const shouldShowBullet = (sectionId: string) => {
-    if (hoveredLink) return hoveredLink === sectionId;
-    return activeSection === sectionId;
-  };
 
+  // Animation and Scroll Effect
   useEffect(() => {
-    setMounted(true);
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (window.innerWidth < 768) {
-        setShowBurger(currentScrollY > 50);
-      } else if (navbarRef.current) {
-        const rect = navbarRef.current.getBoundingClientRect();
-        setShowBurger(rect.bottom <= 0);
-      }
+
       direction.current = currentScrollY > lastScrollY.current ? -1 : 1;
-      speed.current = normalSpeed + 1.5;
+      speed.current = normalSpeed + 4;
       if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
       scrollTimeout.current = setTimeout(() => { speed.current = normalSpeed; }, 150);
       lastScrollY.current = currentScrollY;
@@ -146,8 +123,10 @@ const HeroSection = () => {
     };
 
     requestRef.current = requestAnimationFrame(animate);
-    requestAnimationFrame(() => setTimeout(handleScroll, 50));
+    // Added a slight delay for initial scroll check
+    requestAnimationFrame(() => setTimeout(handleScroll, 50)); 
     window.addEventListener("scroll", handleScroll, { passive: true });
+    
     return () => {
       cancelAnimationFrame(requestRef.current);
       window.removeEventListener("scroll", handleScroll);
@@ -155,6 +134,7 @@ const HeroSection = () => {
     };
   }, []);
 
+  // Body overflow for mobile menu
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
@@ -185,6 +165,7 @@ const HeroSection = () => {
               </Magnet>
             </div>
 
+            {/* Mobile Menu Button */}
             <div
               className="md:hidden text-white text-lg cursor-pointer"
               onClick={toggleMenu}
@@ -192,6 +173,7 @@ const HeroSection = () => {
               Menu
             </div>
 
+            {/* Desktop Navigation Links */}
             <div className="hidden md:flex space-x-4">
               {desktopLinks.map((link) => (
                 <div 
@@ -211,6 +193,7 @@ const HeroSection = () => {
                       <span className="text-white transition-colors duration-300">
                         {link.label}
                       </span>
+                      {/* The bullet indicator is correctly implemented with group-hover */}
                       <span className="absolute -bottom-2 w-1.5 h-1.5 bg-white rounded-full opacity-0 scale-0 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100" />
                     </Link>
                   </Magnet>
@@ -220,81 +203,10 @@ const HeroSection = () => {
           </div>
         </div>
       </nav>
-
-      {/* Sticky Burger - */}
-      {mounted && (
-        <div className={`fixed top-5 right-5 z-50 ${(showBurger || menuOpen)
-            ? "animate-pop pointer-events-auto"
-            : hasPopped
-              ? "animate-depop pointer-events-none"
-              : "opacity-0 pointer-events-none"
-          } md:top-8 md:right-8`}> 
-          <Magnet padding={50} magnetStrength={10}>
-            <div
-              //  size 
-              className="relative w-14 h-14 md:w-20 md:h-20 cursor-pointer flex justify-center items-center rounded-full overflow-hidden group bg-[#333333]"
-              onClick={toggleMenu}
-            >
-              <div
-                className={`absolute bottom-0 left-0 w-full bg-blue-600 transition-all duration-500 ease-in-out z-0 
-                ${menuOpen ? "h-full" : "h-0 group-hover:h-full"}`}
-              />
-              <span
-                className="absolute w-8 h-0.5 bg-white rounded transition-transform duration-300 z-10"
-                style={{
-                  transform: menuOpen ? "rotate(45deg)" : "translateY(-3px)",
-                }}
-              ></span>
-              <span
-                className="absolute w-8 h-0.5 bg-white rounded transition-transform duration-300 z-10"
-                style={{
-                  transform: menuOpen ? "rotate(-45deg)" : "translateY(3px)",
-                }}
-              ></span>
-            </div>
-          </Magnet>
-        </div>
-      )}
-
-      {/* Side Menu */}
-      {mounted && (
-        <div
-          className={`menuPanel fixed top-0 right-0 h-full flex flex-col px-6 z-40 w-full md:w-1/3 ${menuOpen
-              ? "openWave"
-              : hasToggled
-                ? "closeWave"
-                : "translate-x-[100%] pointer-events-none"
-            }`}
-          style={{ backgroundColor: "#333333" }}
-        >
-          <div className="mt-32 mb-4">
-            <p className={`${menuOpen ? "textIn" : "textOut"} text-gray-400 text-sm uppercase tracking-wider`} style={{ animationDelay: "0.05s" }}>
-              Navigation
-            </p>
-            <hr className={`${menuOpen ? "textIn" : "textOut"} border-gray-700 mt-1`} style={{ animationDelay: "0.08s" }} />
-          </div>
-
-          <div className="flex flex-col space-y-2 pl-6">
-            {mobileNavItems.map((item) => (
-              <Link
-                key={item.id}
-                href={item.href}
-                className={`group flex items-center ${menuOpen ? "textIn" : "textOut"}`}
-                style={{ animationDelay: item.delay }}
-                onMouseEnter={() => setHoveredLink(item.id)}
-                onMouseLeave={() => setHoveredLink(null)}
-                onClick={() => setMenuOpen(false)}
-              >
-                <span className={`mr-4 h-3 w-3 rounded-full bg-white transition-all duration-300 ease-in-out ${shouldShowBullet(item.id) ? "opacity-100 scale-100" : "opacity-0 scale-0"}`} />
-                <span className="text-white text-5xl font-normal py-2">{item.label}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
-
+      {/* Background Image/Photo */}
       <img src="images/photo.png" alt="Background" className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none z-30 h-[110vh] md:h-[114vh] w-auto object-cover" />
 
+      {/* Right/Bottom Text Block */}
       <div className="absolute z-30 flex flex-col items-start gap-2 select-none pointer-events-none left-6 bottom-44 md:left-auto md:bottom-auto md:right-32 md:top-[30%]">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white mb-2 w-6 h-6 md:w-8 md:h-8">
           <line x1="7" y1="7" x2="17" y2="17"></line>
@@ -306,6 +218,7 @@ const HeroSection = () => {
         </div>
       </div>
 
+      {/* Left/Top Text Block */}
       <div className="absolute z-30 flex flex-col items-start gap-2 select-none pointer-events-none left-6 top-[30%] md:left-32 md:top-[38%]">
         <div className="flex flex-col text-white font-normal leading-tight text-2xl md:text-3xl">
           <span>Creative Developer</span>
@@ -313,6 +226,7 @@ const HeroSection = () => {
         </div>
       </div>
 
+      {/* Marquee Text */}
       <div 
         ref={marqueeRef} 
         className="absolute bottom-90 md:bottom-40 flex whitespace-nowrap text-[25vw] md:text-[15vw] font-normal leading-none tracking-tight z-30 text-white select-none cursor-default"

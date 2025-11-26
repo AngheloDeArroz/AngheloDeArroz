@@ -317,7 +317,7 @@ const HeroSection = ()=>{
     const requestRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(0);
     const position = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(0);
     const direction = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(1);
-    const normalSpeed = 1.5;
+    const normalSpeed = 2;
     const speed = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(normalSpeed);
     const lastScrollY = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(0);
     const scrollTimeout = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
@@ -986,76 +986,67 @@ const TECH_ICONS = [
     }
 ];
 const AboutSection = ()=>{
+    // Refs for Marquee (Marquee logic remains unchanged)
     const marqueeRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
     const requestRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(0);
-    // Marquee state refs
     const position = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(0);
-    const direction = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(1); // 1: Left-to-Right (Scroll Up), -1: Right-to-Left (Scroll Down)
-    // Speed state refs
+    const direction = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(1);
     const normalSpeed = 1;
     const scrollBoost = 3;
     const speed = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(normalSpeed);
-    // Scroll detection refs
     const lastScrollY = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(0);
     const scrollTimeout = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    // Refs and State for Text Animation
+    const headlineRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const descriptionRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const [isHeadlineVisible, setIsHeadlineVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [isDescriptionVisible, setIsDescriptionVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    // Flag to track animation status
+    const hasAnimatedUp = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(false);
+    // Ref to track the current scroll direction
+    const scrollDirection = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])('down');
+    // --- MARQUEE & SCROLL DIRECTION LOGIC ---
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        // Function to set the correct initial position
         const initializePosition = ()=>{
             if (marqueeRef.current) {
                 const width = marqueeRef.current.scrollWidth / 2;
-                // Initialize position to the start of the duplicate content (-width)
                 position.current = -width;
             }
         };
         const animate = ()=>{
             if (marqueeRef.current) {
-                // Total width of one set of icons
                 const width = marqueeRef.current.scrollWidth / 2;
-                // 1. Update position based on speed and direction
                 position.current += speed.current * direction.current;
-                // 2. Loop Logic: Seamless Reset
                 if (direction.current === 1) {
-                    // If the entire track has moved right past the start point (0), reset it
                     if (position.current > 0) {
                         position.current -= width;
                     }
                 } else {
-                    // If the track has moved left past the duplicate content (-width), reset it
                     if (position.current < -width) {
                         position.current += width;
                     }
                 }
-                // 3. Apply transformation
                 marqueeRef.current.style.transform = `translateX(${position.current}px)`;
             }
             requestRef.current = requestAnimationFrame(animate);
         };
         const handleScroll = ()=>{
             const currentScrollY = window.scrollY;
-            // 1. Determine Direction
-            // Scroll Up (current < last) -> positive direction (LTR)
-            // Scroll Down (current > last) -> negative direction (RTL)
             direction.current = currentScrollY < lastScrollY.current ? 1 : -1;
-            // 2. Apply Speed Boost
+            scrollDirection.current = currentScrollY > lastScrollY.current ? 'down' : 'up';
             speed.current = scrollBoost;
-            // 3. Reset Speed after a short delay
             if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
             scrollTimeout.current = setTimeout(()=>{
                 speed.current = normalSpeed;
             }, 150);
             lastScrollY.current = currentScrollY;
         };
-        // --- SETUP ---
-        // Initialize position on mount/resize
         initializePosition();
         window.addEventListener("resize", initializePosition);
-        // Start the animation loop
         requestRef.current = requestAnimationFrame(animate);
-        // Add scroll listener
         window.addEventListener("scroll", handleScroll, {
             passive: true
         });
-        // --- CLEANUP ---
         return ()=>{
             cancelAnimationFrame(requestRef.current);
             window.removeEventListener("scroll", handleScroll);
@@ -1063,6 +1054,63 @@ const AboutSection = ()=>{
             if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
         };
     }, []);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        // Use a single observer instance
+        const observer = new IntersectionObserver((entries)=>{
+            entries.forEach((entry)=>{
+                const target = entry.target;
+                if (entry.isIntersecting) {
+                    // 1. ANIMATION/SKIP LOGIC (When entering the viewport)
+                    // Condition A: Scroll UP and NOT animated yet -> Animate
+                    if (scrollDirection.current === 'up' && !hasAnimatedUp.current) {
+                        if (target === headlineRef.current) {
+                            setIsHeadlineVisible(true);
+                        } else if (target === descriptionRef.current) {
+                            // Staggered animation
+                            setTimeout(()=>setIsDescriptionVisible(true), 300);
+                        }
+                    } else if (scrollDirection.current === 'down' || hasAnimatedUp.current) {
+                        if (target === headlineRef.current) {
+                            setIsHeadlineVisible(true);
+                        } else if (target === descriptionRef.current) {
+                            setIsDescriptionVisible(true);
+                        }
+                    }
+                } else {
+                    if (entry.boundingClientRect.top >= window.innerHeight) {
+                        // Reset state and flag
+                        if (hasAnimatedUp.current) {
+                            hasAnimatedUp.current = false;
+                            setIsHeadlineVisible(false);
+                            setIsDescriptionVisible(false);
+                            // Re-observe the elements
+                            if (headlineRef.current) observer.observe(headlineRef.current);
+                            if (descriptionRef.current) observer.observe(descriptionRef.current);
+                        }
+                    }
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.1
+        });
+        if (isHeadlineVisible && isDescriptionVisible && !hasAnimatedUp.current) {
+            hasAnimatedUp.current = true;
+        }
+        // Start observing both elements
+        if (headlineRef.current) observer.observe(headlineRef.current);
+        if (descriptionRef.current) observer.observe(descriptionRef.current);
+        return ()=>{
+            // Cleanup observers
+            if (headlineRef.current) observer.unobserve(headlineRef.current);
+            if (descriptionRef.current) observer.unobserve(descriptionRef.current);
+        };
+    }, [
+        isHeadlineVisible,
+        isDescriptionVisible
+    ]); // Depend on visibility states to lock the flag
+    // Ensure the scroll direction update logic runs consistently
+    // (This is already handled in the Marquee useEffect, but we keep it clean)
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         id: "about",
         className: "py-24 bg-white",
@@ -1073,44 +1121,48 @@ const AboutSection = ()=>{
                     className: "flex flex-col md:flex-row justify-between gap-10",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "md:w-7/12",
+                            ref: headlineRef,
+                            className: `md:w-7/12 transition-all duration-1000 ease-out 
+                            ${isHeadlineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`,
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-xl sm:text-2xl lg:text-3xl font-bold leading-snug text-gray-900",
                                 children: "Dedicated to excellence. Expertise across full-stack development and network architecture."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/AboutSection.tsx",
-                                lineNumber: 139,
+                                lineNumber: 196,
                                 columnNumber: 25
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/components/AboutSection.tsx",
-                            lineNumber: 138,
+                            lineNumber: 190,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "md:w-4/12 flex items-start pt-2",
+                            ref: descriptionRef,
+                            className: `md:w-4/12 flex items-start pt-2 transition-all duration-1000 ease-out 
+                            ${isDescriptionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`,
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-sm text-gray-700 leading-relaxed text-justify",
                                 children: "I am a student of Information Technology specializing in Network Technology. I am a full-stack developer experienced in software, app, and web development. My skills include networking, cloud computing, and cybersecurity fundamentals."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/AboutSection.tsx",
-                                lineNumber: 147,
+                                lineNumber: 209,
                                 columnNumber: 25
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/components/AboutSection.tsx",
-                            lineNumber: 146,
+                            lineNumber: 203,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/AboutSection.tsx",
-                    lineNumber: 135,
+                    lineNumber: 187,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/AboutSection.tsx",
-                lineNumber: 134,
+                lineNumber: 186,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1123,12 +1175,12 @@ const AboutSection = ()=>{
                             children: "Technologies & Expertise"
                         }, void 0, false, {
                             fileName: "[project]/src/components/AboutSection.tsx",
-                            lineNumber: 161,
+                            lineNumber: 223,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/AboutSection.tsx",
-                        lineNumber: 160,
+                        lineNumber: 222,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1140,7 +1192,6 @@ const AboutSection = ()=>{
                                 ...TECH_ICONS,
                                 ...TECH_ICONS
                             ].map((item, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    // Hover and Transition classes applied here
                                     className: "flex flex-col items-center justify-center p-4 mx-10 transition duration-500 hover:scale-110 hover:-translate-y-1 hover:drop-shadow-lg",
                                     style: {
                                         width: "100px",
@@ -1156,7 +1207,7 @@ const AboutSection = ()=>{
                                             }
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/AboutSection.tsx",
-                                            lineNumber: 178,
+                                            lineNumber: 239,
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1164,35 +1215,35 @@ const AboutSection = ()=>{
                                             children: item.alt
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/AboutSection.tsx",
-                                            lineNumber: 184,
+                                            lineNumber: 245,
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, i, true, {
                                     fileName: "[project]/src/components/AboutSection.tsx",
-                                    lineNumber: 172,
+                                    lineNumber: 234,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0)))
                         }, void 0, false, {
                             fileName: "[project]/src/components/AboutSection.tsx",
-                            lineNumber: 170,
+                            lineNumber: 232,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/AboutSection.tsx",
-                        lineNumber: 167,
+                        lineNumber: 229,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/AboutSection.tsx",
-                lineNumber: 158,
+                lineNumber: 220,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/AboutSection.tsx",
-        lineNumber: 132,
+        lineNumber: 184,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };

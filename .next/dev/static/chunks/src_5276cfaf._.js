@@ -464,11 +464,11 @@ var _s = __turbopack_context__.k.signature();
 const HeroSection = ()=>{
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(34);
-    if ($[0] !== "02242dd3f2c7699c8187c41257c836f989c02d3204290ca26c085d603c251abc") {
+    if ($[0] !== "243a2cf3a8138542fec5c608925ba60d7ca014aed2cb2ac822fb5650359b669f") {
         for(let $i = 0; $i < 34; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "02242dd3f2c7699c8187c41257c836f989c02d3204290ca26c085d603c251abc";
+        $[0] = "243a2cf3a8138542fec5c608925ba60d7ca014aed2cb2ac822fb5650359b669f";
     }
     const marqueeRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const navbarRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
@@ -478,7 +478,7 @@ const HeroSection = ()=>{
     const requestRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(0);
     const position = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(0);
     const direction = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(1);
-    const speed = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(1.5);
+    const speed = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(2);
     const lastScrollY = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(0);
     const scrollTimeout = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const [mounted, setMounted] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
@@ -681,12 +681,12 @@ const HeroSection = ()=>{
                     }
                 }
                 direction.current = currentScrollY > lastScrollY.current ? -1 : 1;
-                speed.current = 3;
+                speed.current = 3.5;
                 if (scrollTimeout.current) {
                     clearTimeout(scrollTimeout.current);
                 }
                 scrollTimeout.current = setTimeout(()=>{
-                    speed.current = 1.5;
+                    speed.current = 2;
                 }, 150);
                 lastScrollY.current = currentScrollY;
             };
@@ -1327,12 +1327,12 @@ const TECH_ICONS = [
 ];
 const AboutSection = ()=>{
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(7);
-    if ($[0] !== "76c38e768b3199a0c7db2c6a8e6a05bb1674db5057a1843528ff80e2a6355dfd") {
-        for(let $i = 0; $i < 7; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(20);
+    if ($[0] !== "f500d4eb6e1767ba10f51a5b883e855fd3c1b7a07d11d01227bc8f4a63583144") {
+        for(let $i = 0; $i < 20; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "76c38e768b3199a0c7db2c6a8e6a05bb1674db5057a1843528ff80e2a6355dfd";
+        $[0] = "f500d4eb6e1767ba10f51a5b883e855fd3c1b7a07d11d01227bc8f4a63583144";
     }
     const marqueeRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const requestRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(0);
@@ -1341,6 +1341,12 @@ const AboutSection = ()=>{
     const speed = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(1);
     const lastScrollY = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(0);
     const scrollTimeout = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const headlineRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const descriptionRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const [isHeadlineVisible, setIsHeadlineVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [isDescriptionVisible, setIsDescriptionVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const hasAnimatedUp = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(false);
+    const scrollDirection = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])("down");
     let t0;
     let t1;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -1371,6 +1377,7 @@ const AboutSection = ()=>{
             const handleScroll = ()=>{
                 const currentScrollY = window.scrollY;
                 direction.current = currentScrollY < lastScrollY.current ? 1 : -1;
+                scrollDirection.current = currentScrollY > lastScrollY.current ? "down" : "up";
                 speed.current = 3;
                 if (scrollTimeout.current) {
                     clearTimeout(scrollTimeout.current);
@@ -1404,134 +1411,251 @@ const AboutSection = ()=>{
     }
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t0, t1);
     let t2;
-    if ($[3] === Symbol.for("react.memo_cache_sentinel")) {
-        t2 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "md:w-7/12",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "text-xl sm:text-2xl lg:text-3xl font-bold leading-snug text-gray-900",
-                children: "Dedicated to excellence. Expertise across full-stack development and network architecture."
-            }, void 0, false, {
-                fileName: "[project]/src/components/AboutSection.tsx",
-                lineNumber: 150,
-                columnNumber: 37
-            }, ("TURBOPACK compile-time value", void 0))
+    let t3;
+    if ($[3] !== isDescriptionVisible || $[4] !== isHeadlineVisible) {
+        t2 = ()=>{
+            const observer = new IntersectionObserver((entries)=>{
+                entries.forEach((entry)=>{
+                    const target = entry.target;
+                    if (entry.isIntersecting) {
+                        if (scrollDirection.current === "up" && !hasAnimatedUp.current) {
+                            if (target === headlineRef.current) {
+                                setIsHeadlineVisible(true);
+                            } else {
+                                if (target === descriptionRef.current) {
+                                    setTimeout(()=>setIsDescriptionVisible(true), 300);
+                                }
+                            }
+                        } else {
+                            if (scrollDirection.current === "down" || hasAnimatedUp.current) {
+                                if (target === headlineRef.current) {
+                                    setIsHeadlineVisible(true);
+                                } else {
+                                    if (target === descriptionRef.current) {
+                                        setIsDescriptionVisible(true);
+                                    }
+                                }
+                            }
+                        }
+                    } else {
+                        if (entry.boundingClientRect.top >= window.innerHeight) {
+                            if (hasAnimatedUp.current) {
+                                hasAnimatedUp.current = false;
+                                setIsHeadlineVisible(false);
+                                setIsDescriptionVisible(false);
+                                if (headlineRef.current) {
+                                    observer.observe(headlineRef.current);
+                                }
+                                if (descriptionRef.current) {
+                                    observer.observe(descriptionRef.current);
+                                }
+                            }
+                        }
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0.1
+            });
+            if (isHeadlineVisible && isDescriptionVisible && !hasAnimatedUp.current) {
+                hasAnimatedUp.current = true;
+            }
+            if (headlineRef.current) {
+                observer.observe(headlineRef.current);
+            }
+            if (descriptionRef.current) {
+                observer.observe(descriptionRef.current);
+            }
+            return ()=>{
+                if (headlineRef.current) {
+                    observer.unobserve(headlineRef.current);
+                }
+                if (descriptionRef.current) {
+                    observer.unobserve(descriptionRef.current);
+                }
+            };
+        };
+        t3 = [
+            isHeadlineVisible,
+            isDescriptionVisible
+        ];
+        $[3] = isDescriptionVisible;
+        $[4] = isHeadlineVisible;
+        $[5] = t2;
+        $[6] = t3;
+    } else {
+        t2 = $[5];
+        t3 = $[6];
+    }
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t2, t3);
+    const t4 = `md:w-7/12 transition-all duration-1000 ease-out 
+                            ${isHeadlineVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`;
+    let t5;
+    if ($[7] === Symbol.for("react.memo_cache_sentinel")) {
+        t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+            className: "text-xl sm:text-2xl lg:text-3xl font-bold leading-snug text-gray-900",
+            children: "Dedicated to excellence. Expertise across full-stack development and network architecture."
         }, void 0, false, {
             fileName: "[project]/src/components/AboutSection.tsx",
-            lineNumber: 150,
+            lineNumber: 234,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[3] = t2;
+        $[7] = t5;
     } else {
-        t2 = $[3];
+        t5 = $[7];
     }
-    let t3;
-    if ($[4] === Symbol.for("react.memo_cache_sentinel")) {
-        t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    let t6;
+    if ($[8] !== t4) {
+        t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            ref: headlineRef,
+            className: t4,
+            children: t5
+        }, void 0, false, {
+            fileName: "[project]/src/components/AboutSection.tsx",
+            lineNumber: 241,
+            columnNumber: 10
+        }, ("TURBOPACK compile-time value", void 0));
+        $[8] = t4;
+        $[9] = t6;
+    } else {
+        t6 = $[9];
+    }
+    const t7 = `md:w-4/12 flex items-start pt-2 transition-all duration-1000 ease-out 
+                            ${isDescriptionVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`;
+    let t8;
+    if ($[10] === Symbol.for("react.memo_cache_sentinel")) {
+        t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+            className: "text-sm text-gray-700 leading-relaxed text-justify",
+            children: "I am a student of Information Technology specializing in Network Technology. I am a full-stack developer experienced in software, app, and web development. My skills include networking, cloud computing, and cybersecurity fundamentals."
+        }, void 0, false, {
+            fileName: "[project]/src/components/AboutSection.tsx",
+            lineNumber: 251,
+            columnNumber: 10
+        }, ("TURBOPACK compile-time value", void 0));
+        $[10] = t8;
+    } else {
+        t8 = $[10];
+    }
+    let t9;
+    if ($[11] !== t7) {
+        t9 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            ref: descriptionRef,
+            className: t7,
+            children: t8
+        }, void 0, false, {
+            fileName: "[project]/src/components/AboutSection.tsx",
+            lineNumber: 258,
+            columnNumber: 10
+        }, ("TURBOPACK compile-time value", void 0));
+        $[11] = t7;
+        $[12] = t9;
+    } else {
+        t9 = $[12];
+    }
+    let t10;
+    if ($[13] !== t6 || $[14] !== t9) {
+        t10 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "max-w-5xl mx-auto px-8 lg:px-16",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex flex-col md:flex-row justify-between gap-10",
                 children: [
-                    t2,
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "md:w-4/12 flex items-start pt-2",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-sm text-gray-700 leading-relaxed text-justify",
-                            children: "I am a student of Information Technology specializing in Network Technology. I am a full-stack developer experienced in software, app, and web development. My skills include networking, cloud computing, and cybersecurity fundamentals."
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/AboutSection.tsx",
-                            lineNumber: 157,
-                            columnNumber: 178
-                        }, ("TURBOPACK compile-time value", void 0))
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/AboutSection.tsx",
-                        lineNumber: 157,
-                        columnNumber: 129
-                    }, ("TURBOPACK compile-time value", void 0))
+                    t6,
+                    t9
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/AboutSection.tsx",
-                lineNumber: 157,
-                columnNumber: 59
+                lineNumber: 266,
+                columnNumber: 60
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/components/AboutSection.tsx",
-            lineNumber: 157,
-            columnNumber: 10
+            lineNumber: 266,
+            columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[4] = t3;
+        $[13] = t6;
+        $[14] = t9;
+        $[15] = t10;
     } else {
-        t3 = $[4];
+        t10 = $[15];
     }
-    let t4;
-    if ($[5] === Symbol.for("react.memo_cache_sentinel")) {
-        t4 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    let t11;
+    if ($[16] === Symbol.for("react.memo_cache_sentinel")) {
+        t11 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "max-w-5xl mx-auto px-8 lg:px-16",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                 className: "text-sm font-semibold text-gray-500 uppercase tracking-widest text-center mb-10",
                 children: "Technologies & Expertise"
             }, void 0, false, {
                 fileName: "[project]/src/components/AboutSection.tsx",
-                lineNumber: 164,
-                columnNumber: 59
+                lineNumber: 275,
+                columnNumber: 60
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/components/AboutSection.tsx",
-            lineNumber: 164,
-            columnNumber: 10
+            lineNumber: 275,
+            columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[5] = t4;
+        $[16] = t11;
     } else {
-        t4 = $[5];
+        t11 = $[16];
     }
-    let t5;
-    if ($[6] === Symbol.for("react.memo_cache_sentinel")) {
-        t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-            id: "about",
-            className: "py-24 bg-white",
+    let t12;
+    if ($[17] === Symbol.for("react.memo_cache_sentinel")) {
+        t12 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "w-full mt-16 pt-10 border-t border-gray-200 overflow-hidden",
             children: [
-                t3,
+                t11,
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "w-full mt-16 pt-10 border-t border-gray-200 overflow-hidden",
-                    children: [
-                        t4,
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "relative w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent,_black_10%,_black_90%,transparent)]",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                ref: marqueeRef,
-                                className: "flex whitespace-nowrap will-change-transform",
-                                children: [
-                                    ...TECH_ICONS,
-                                    ...TECH_ICONS
-                                ].map(_temp)
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/AboutSection.tsx",
-                                lineNumber: 171,
-                                columnNumber: 277
-                            }, ("TURBOPACK compile-time value", void 0))
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/AboutSection.tsx",
-                            lineNumber: 171,
-                            columnNumber: 142
-                        }, ("TURBOPACK compile-time value", void 0))
-                    ]
-                }, void 0, true, {
+                    className: "relative w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent,_black_10%,_black_90%,transparent)]",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        ref: marqueeRef,
+                        className: "flex whitespace-nowrap will-change-transform",
+                        children: [
+                            ...TECH_ICONS,
+                            ...TECH_ICONS
+                        ].map(_temp)
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/AboutSection.tsx",
+                        lineNumber: 282,
+                        columnNumber: 228
+                    }, ("TURBOPACK compile-time value", void 0))
+                }, void 0, false, {
                     fileName: "[project]/src/components/AboutSection.tsx",
-                    lineNumber: 171,
-                    columnNumber: 61
+                    lineNumber: 282,
+                    columnNumber: 93
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/AboutSection.tsx",
-            lineNumber: 171,
-            columnNumber: 10
+            lineNumber: 282,
+            columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[6] = t5;
+        $[17] = t12;
     } else {
-        t5 = $[6];
+        t12 = $[17];
     }
-    return t5;
+    let t13;
+    if ($[18] !== t10) {
+        t13 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+            id: "about",
+            className: "py-24 bg-white",
+            children: [
+                t10,
+                t12
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/AboutSection.tsx",
+            lineNumber: 289,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0));
+        $[18] = t10;
+        $[19] = t13;
+    } else {
+        t13 = $[19];
+    }
+    return t13;
 };
-_s(AboutSection, "EnNySZoJXMQet7UEAQMqkq6SXDk=");
+_s(AboutSection, "5GD0icmp0uMGY4VJofrUoCgWVF4=");
 _c = AboutSection;
 const __TURBOPACK__default__export__ = AboutSection;
 function _temp(item, i) {
@@ -1551,7 +1675,7 @@ function _temp(item, i) {
                 }
             }, void 0, false, {
                 fileName: "[project]/src/components/AboutSection.tsx",
-                lineNumber: 183,
+                lineNumber: 302,
                 columnNumber: 6
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1559,13 +1683,13 @@ function _temp(item, i) {
                 children: item.alt
             }, void 0, false, {
                 fileName: "[project]/src/components/AboutSection.tsx",
-                lineNumber: 185,
+                lineNumber: 304,
                 columnNumber: 10
             }, this)
         ]
     }, i, true, {
         fileName: "[project]/src/components/AboutSection.tsx",
-        lineNumber: 180,
+        lineNumber: 299,
         columnNumber: 10
     }, this);
 }
