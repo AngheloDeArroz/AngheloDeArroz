@@ -12,6 +12,7 @@ const HeroSection = () => {
   // Refs for desktop links used for the magnet effect and rendering
   const aboutRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
+  const certificationsRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
   // Marquee/Animation Refs and Variables
@@ -31,6 +32,7 @@ const HeroSection = () => {
   const desktopLinks = [
     { id: "desktop-about", label: "About", href: "#about", ref: aboutRef },
     { id: "desktop-projects", label: "Projects", href: "#projects", ref: projectsRef },
+    { id: "desktop-certifications", label: "Certifications", href: "#certifications", ref: certificationsRef },
     { id: "desktop-contact", label: "Contact", href: "#contact", ref: contactRef },
   ];
 
@@ -44,6 +46,7 @@ const HeroSection = () => {
       const targets = [
         { id: "desktop-about", ref: aboutRef },
         { id: "desktop-projects", ref: projectsRef },
+        { id: "desktop-certifications", ref: certificationsRef },
         { id: "desktop-contact", ref: contactRef },
       ];
 
@@ -82,7 +85,7 @@ const HeroSection = () => {
 
   // Intersection Observer: Updates active section on scroll
   useEffect(() => {
-    const sections = ["home", "about", "projects", "contact"];
+    const sections = ["home", "about", "projects", "certifications", "contact"];
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -124,9 +127,9 @@ const HeroSection = () => {
 
     requestRef.current = requestAnimationFrame(animate);
     // Added a slight delay for initial scroll check
-    requestAnimationFrame(() => setTimeout(handleScroll, 50)); 
+    requestAnimationFrame(() => setTimeout(handleScroll, 50));
     window.addEventListener("scroll", handleScroll, { passive: true });
-    
+
     return () => {
       cancelAnimationFrame(requestRef.current);
       window.removeEventListener("scroll", handleScroll);
@@ -146,7 +149,7 @@ const HeroSection = () => {
       <nav ref={navbarRef} className="absolute top-0 left-0 w-full z-40 bg-transparent mt-2">
         <div className="max-w-7xl mx-auto px-6 sm:px-4 lg:px-2">
           <div className="flex justify-between h-16 items-center">
-            
+
             {/* Logo with Magnet + Decrypted Text */}
             <div className="text-white text-lg font-semibold relative z-10">
               <Magnet padding={30} magnetStrength={7}>
@@ -176,18 +179,18 @@ const HeroSection = () => {
             {/* Desktop Navigation Links */}
             <div className="hidden md:flex space-x-4">
               {desktopLinks.map((link) => (
-                <div 
-                  key={link.id} 
-                  ref={link.ref} 
+                <div
+                  key={link.id}
+                  ref={link.ref}
                   className="relative z-10 p-2"
                 >
                   <Magnet
                     padding={50}
-                    magnetStrength={4} 
+                    magnetStrength={4}
                     disabled={closestMagnet !== link.id}
                   >
-                    <Link 
-                      href={link.href} 
+                    <Link
+                      href={link.href}
                       className="relative flex flex-col items-center group cursor-pointer"
                     >
                       <span className="text-white transition-colors duration-300">
@@ -221,14 +224,14 @@ const HeroSection = () => {
       {/* Left/Top Text Block */}
       <div className="absolute z-30 flex flex-col items-start gap-2 select-none pointer-events-none left-6 top-[30%] md:left-32 md:top-[38%]">
         <div className="flex flex-col text-white font-normal leading-tight text-2xl md:text-3xl">
-          <span>Creative Developer</span>
-          <span>UX / UI Passionate</span>
+          <span>Developer | Programmer</span>
+          <span>Pursuing excellence</span>
         </div>
       </div>
 
       {/* Marquee Text */}
-      <div 
-        ref={marqueeRef} 
+      <div
+        ref={marqueeRef}
         className="absolute bottom-90 md:bottom-40 flex whitespace-nowrap text-[25vw] md:text-[15vw] font-normal leading-none tracking-tight z-30 text-white select-none cursor-default"
       >
         <span className="mr-20"> — Anghelo Dearroz</span>

@@ -208,8 +208,8 @@ const AboutSection: React.FC = () => {
                     >
                         <p className="text-sm text-gray-700 leading-relaxed text-justify">
                             I am a student of Information Technology specializing in Network Technology.
-                            I am a full-stack developer experienced in software, app, and web development.
-                            My skills include networking, cloud computing, and cybersecurity fundamentals.
+                            Pursuing to be a full-stack developer in software, app, and web development.
+                            My skills include programming, software development, web and app development, cloud computing, and cybersecurity principles.
                         </p>
                     </div>
 

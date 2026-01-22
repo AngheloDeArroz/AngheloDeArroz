@@ -464,11 +464,11 @@ var _s = __turbopack_context__.k.signature();
 const HeroSection = ()=>{
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(23);
-    if ($[0] !== "056c28f6c2a601d4e75df3ca30b211666b48126ce420256502ea430fde082ce9") {
+    if ($[0] !== "208b6f96fb592dd260389d14314a0f5e09b8c0ca39fc8e238dd1198a12e448ec") {
         for(let $i = 0; $i < 23; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "056c28f6c2a601d4e75df3ca30b211666b48126ce420256502ea430fde082ce9";
+        $[0] = "208b6f96fb592dd260389d14314a0f5e09b8c0ca39fc8e238dd1198a12e448ec";
     }
     const marqueeRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const navbarRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
@@ -913,18 +913,18 @@ const HeroSection = ()=>{
                 className: "flex flex-col text-white font-normal leading-tight text-2xl md:text-3xl",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        children: "Creative Developer"
+                        children: "Specializing in"
                     }, void 0, false, {
                         fileName: "[project]/src/components/HeroSection.tsx",
                         lineNumber: 248,
                         columnNumber: 236
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        children: "UX / UI Passionate"
+                        children: "Network & Security"
                     }, void 0, false, {
                         fileName: "[project]/src/components/HeroSection.tsx",
                         lineNumber: 248,
-                        columnNumber: 267
+                        columnNumber: 264
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
@@ -1111,11 +1111,11 @@ const TECH_ICONS = [
 const AboutSection = ()=>{
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(20);
-    if ($[0] !== "f500d4eb6e1767ba10f51a5b883e855fd3c1b7a07d11d01227bc8f4a63583144") {
+    if ($[0] !== "5d96e9586c0ba0978059b8ff1d2c1027bfc7d0b8541e3fe629ffe81b0f08a622") {
         for(let $i = 0; $i < 20; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "f500d4eb6e1767ba10f51a5b883e855fd3c1b7a07d11d01227bc8f4a63583144";
+        $[0] = "5d96e9586c0ba0978059b8ff1d2c1027bfc7d0b8541e3fe629ffe81b0f08a622";
     }
     const marqueeRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const requestRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(0);
@@ -1511,11 +1511,11 @@ var _s = __turbopack_context__.k.signature();
 function Home() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(32);
-    if ($[0] !== "db9eda738c6f9b3482775562e76c90b6d06cf7e744d88f1bf7fb71556fb38ff2") {
+    if ($[0] !== "27fef9e65d7b5dfc967a473a8f57826d2592e62d10a1c33cda122c0203f1463e") {
         for(let $i = 0; $i < 32; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "db9eda738c6f9b3482775562e76c90b6d06cf7e744d88f1bf7fb71556fb38ff2";
+        $[0] = "27fef9e65d7b5dfc967a473a8f57826d2592e62d10a1c33cda122c0203f1463e";
     }
     const [scrollY, setScrollY] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
     const [mounted, setMounted] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
