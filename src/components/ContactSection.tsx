@@ -26,9 +26,9 @@ export default function ContactSection() {
 
                     <div className="space-y-4">
                         {/* Email link directed to Gmail Compose */}
-                        <a 
-                            href="https://mail.google.com/mail/?view=cm&fs=1&to=anghelodechavezdearroz@gmail.com" 
-                            target="_blank" 
+                        <a
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=anghelodechavezdearroz@gmail.com"
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center space-x-4 cursor-pointer transition-transform duration-300 hover:scale-105 w-fit"
                         >
@@ -42,13 +42,13 @@ export default function ContactSection() {
                     </div>
 
                     <div className="flex space-x-4 pt-4">
-                        <SocialLink 
-                            icon={faLinkedin} 
-                            href="https://www.linkedin.com/in/anghelo-de-arroz-bb17a537b" 
+                        <SocialLink
+                            icon={faLinkedin}
+                            href="https://www.linkedin.com/in/anghelo-de-arroz-bb17a537b"
                         />
-                        <SocialLink 
-                            icon={faGithub} 
-                            href="https://github.com/AngheloDeArroz" 
+                        <SocialLink
+                            icon={faGithub}
+                            href="https://github.com/AngheloDeArroz"
                         />
                     </div>
                 </div>
@@ -56,7 +56,7 @@ export default function ContactSection() {
                 <div className="order-1 md:order-2 flex justify-center md:justify-end">
                     <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-gray-200 shadow-2xl transition-transform duration-500 hover:scale-105">
                         <Image
-                            src="/images/linkedinphoto.png"
+                            src="/AngheloDeArroz/images/linkedinphoto.png"
                             alt="Profile"
                             fill
                             className="object-cover"

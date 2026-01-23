@@ -10,7 +10,7 @@ const certificates = [
         date: "November 2025",
         credentialId: "AWS-FG-2025-1112",
         description: "Foundational-level certification demonstrating expertise in basic cloud concepts and AWS services.",
-        imagePath: "/images/certificate_images/AWS_Cloud_Foundations.png",
+        imagePath: "/AngheloDeArroz/images/certificate_images/AWS_Cloud_Foundations.png",
     },
     {
         id: 2,
@@ -19,7 +19,7 @@ const certificates = [
         date: "2025",
         credentialId: "AWS-SEC-FOUND",
         description: "Validates understanding of core AWS security concepts and best practices for cloud infrastructure.",
-        imagePath: "/images/certificate_images/AWS_CLOUD_SECURITY _FOUNDATIONS.png",
+        imagePath: "/AngheloDeArroz/images/certificate_images/AWS_CLOUD_SECURITY _FOUNDATIONS.png",
     },
     {
         id: 3,
@@ -28,7 +28,7 @@ const certificates = [
         date: "2025",
         credentialId: "CCNA-V7-SRWE",
         description: "Intermediate networking concepts focusing on switching, routing, and wireless infrastructure.",
-        imagePath: "/images/certificate_images/CCNAv7 .png",
+        imagePath: "/AngheloDeArroz/images/certificate_images/CCNAv7 .png",
     },
     {
         id: 4,
@@ -37,7 +37,7 @@ const certificates = [
         date: "2025",
         credentialId: "CISCO-CYBER",
         description: "Basic principles of cybersecurity, legal and ethical issues, and network protection techniques.",
-        imagePath: "/images/certificate_images/Introduction to Cybersecurity.png",
+        imagePath: "/AngheloDeArroz/images/certificate_images/Introduction to Cybersecurity.png",
     },
     {
         id: 5,
@@ -46,7 +46,7 @@ const certificates = [
         date: "2025",
         credentialId: "CISCO-DEFENSE",
         description: "Technical skills required to design, implement, and support network security.",
-        imagePath: "/images/certificate_images/Network Defense.png",
+        imagePath: "/AngheloDeArroz/images/certificate_images/Network Defense.png",
     }
 ];
 

@@ -23,8 +23,8 @@ export default function Home() {
   const [hasToggled, setHasToggled] = useState(false);
   const [hasPopped, setHasPopped] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const [hoveredLink, setHoveredLink] = useState(null);
-  const [closestMagnet, setClosestMagnet] = useState(null);
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+  const [closestMagnet, setClosestMagnet] = useState<string | null>(null);
 
   const mobileNavItems = [
     { id: "home", label: "Home", href: "#home", delay: "0.12s" },
@@ -99,7 +99,7 @@ export default function Home() {
   });
 
   const bottomContentParallax = useSpring({
-    y: scrollY * -0.1, 
+    y: scrollY * -0.1,
     config: { tension: 120, friction: 20 },
   });
 
@@ -173,27 +173,27 @@ export default function Home() {
           <div className="mt-auto mb-16 pl-4">
             <p className={`${menuOpen ? "textIn" : "textOut"} text-gray-500 text-xs uppercase tracking-[0.2em] font-bold mb-6`} style={{ animationDelay: "0.3s" }}>Socials</p>
             <div className="flex space-x-6">
-              <a 
-                href="https://www.linkedin.com/in/anghelo-de-arroz-bb17a537b" 
-                target="_blank" 
+              <a
+                href="https://www.linkedin.com/in/anghelo-de-arroz-bb17a537b"
+                target="_blank"
                 rel="noopener noreferrer"
                 className={`${menuOpen ? "textIn" : "textOut"} text-gray-400 hover:text-white transition-colors text-xl`}
                 style={{ animationDelay: "0.33s" }}
               >
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
-              <a 
-                href="https://github.com/AngheloDeArroz" 
-                target="_blank" 
+              <a
+                href="https://github.com/AngheloDeArroz"
+                target="_blank"
                 rel="noopener noreferrer"
                 className={`${menuOpen ? "textIn" : "textOut"} text-gray-400 hover:text-white transition-colors text-xl`}
                 style={{ animationDelay: "0.36s" }}
               >
                 <FontAwesomeIcon icon={faGithub} />
               </a>
-              <a 
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=anghelodechavezdearroz@gmail.com" 
-                target="_blank" 
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=anghelodechavezdearroz@gmail.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className={`${menuOpen ? "textIn" : "textOut"} text-gray-400 hover:text-white transition-colors text-xl`}
                 style={{ animationDelay: "0.39s" }}
@@ -227,17 +227,17 @@ export default function Home() {
         </animated.div>
       </div>
 
-      <animated.div 
+      <animated.div
         style={{
           ...bottomContentParallax,
           marginBottom: `calc(${scrollY * -0.1}px)`
-        }} 
+        }}
         className="relative z-30 bg-white"
       >
         <div id="projects">
           <ProjectsSection />
         </div>
-        
+
         <div id="certifications">
           <CertificationsSection />
         </div>

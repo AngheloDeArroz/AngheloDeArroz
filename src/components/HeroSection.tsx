@@ -5,7 +5,31 @@ import Link from "next/link";
 import Magnet from "../ui/magnet";
 import DecryptedText from "../ui/decrypted";
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  heroStyle: any;
+  menuOpen: boolean;
+  toggleMenu: () => void;
+  mobileNavItems: any[];
+  hoveredLink: string | null;
+  setHoveredLink: (id: string | null) => void;
+  shouldShowBullet: (id: string) => boolean;
+  activeSection: string;
+  closestMagnet: string | null;
+  setClosestMagnet: (id: string | null) => void;
+}
+
+const HeroSection = ({
+  heroStyle,
+  menuOpen,
+  toggleMenu,
+  mobileNavItems,
+  hoveredLink,
+  setHoveredLink,
+  shouldShowBullet,
+  activeSection,
+  closestMagnet,
+  setClosestMagnet
+}: HeroSectionProps) => {
   const marqueeRef = useRef<HTMLDivElement>(null);
   const navbarRef = useRef<HTMLDivElement>(null);
 
@@ -24,22 +48,12 @@ const HeroSection = () => {
   const lastScrollY = useRef(0);
   const scrollTimeout = useRef<NodeJS.Timeout | null>(null);
 
-  // State Variables
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
-  const [closestMagnet, setClosestMagnet] = useState<string | null>(null);
-
   const desktopLinks = [
     { id: "desktop-about", label: "About", href: "#about", ref: aboutRef },
     { id: "desktop-projects", label: "Projects", href: "#projects", ref: projectsRef },
     { id: "desktop-certifications", label: "Certifications", href: "#certifications", ref: certificationsRef },
     { id: "desktop-contact", label: "Contact", href: "#contact", ref: contactRef },
   ];
-
-  const toggleMenu = () => {
-    // Removed setHasToggled(true) as hasToggled is unused
-    setMenuOpen((prev) => !prev);
-  };
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -81,25 +95,7 @@ const HeroSection = () => {
 
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
-
-  // Intersection Observer: Updates active section on scroll
-  useEffect(() => {
-    const sections = ["home", "about", "projects", "certifications", "contact"];
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActiveSection(entry.target.id);
-        });
-      },
-      { rootMargin: "-50% 0px -50% 0px" }
-    );
-    sections.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-    return () => observer.disconnect();
-  }, []);
+  }, [closestMagnet, setClosestMagnet]);
 
 
   // Animation and Scroll Effect
@@ -207,7 +203,7 @@ const HeroSection = () => {
         </div>
       </nav>
       {/* Background Image/Photo */}
-      <img src="images/photo.png" alt="Background" className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none z-30 h-[110vh] md:h-[114vh] w-auto object-cover" />
+      <img src="/AngheloDeArroz/images/photo.png" alt="Background" className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none z-30 h-[110vh] md:h-[114vh] w-auto object-cover" />
 
       {/* Right/Bottom Text Block */}
       <div className="absolute z-30 flex flex-col items-start gap-2 select-none pointer-events-none left-6 bottom-44 md:left-auto md:bottom-auto md:right-32 md:top-[30%]">

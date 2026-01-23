@@ -12,10 +12,10 @@ const projects = [
         color: "bg-blue-600",
         height: "h-96",
         images: [
-            "/images/projects/rrjapp.png",
-            "/images/projects/rrjapp2.png",
-            "/images/projects/rrjapp3.png",
-            "/images/projects/rrjapp4.png"
+            "/AngheloDeArroz/images/projects/rrjapp.png",
+            "/AngheloDeArroz/images/projects/rrjapp2.png",
+            "/AngheloDeArroz/images/projects/rrjapp3.png",
+            "/AngheloDeArroz/images/projects/rrjapp4.png"
         ],
         link: "https://github.com/AngheloDeArroz/RRJ_Watch"
     },
@@ -27,11 +27,11 @@ const projects = [
         color: "bg-cyan-500",
         height: "h-72",
         images: [
-            "/images/projects/rrjweb.png",
-            "/images/projects/rrjweb2.png",
-            "/images/projects/rrjweb3.png",
-            "/images/projects/rrjwatch4.png",
-            "/images/projects/rrjwatch5.png"
+            "/AngheloDeArroz/images/projects/rrjweb.png",
+            "/AngheloDeArroz/images/projects/rrjweb2.png",
+            "/AngheloDeArroz/images/projects/rrjweb3.png",
+            "/AngheloDeArroz/images/projects/rrjwatch4.png",
+            "/AngheloDeArroz/images/projects/rrjwatch5.png"
         ],
         link: "https://github.com/AngheloDeArroz/RRJ_Watch_Web"
     },
@@ -43,9 +43,9 @@ const projects = [
         color: "bg-neutral-800",
         height: "h-96",
         images: [
-            "/images/projects/cashflow.png",
-            "/images/projects/cashflow2.png",
-            "/images/projects/cashflow3.png"
+            "/AngheloDeArroz/images/projects/cashflow.png",
+            "/AngheloDeArroz/images/projects/cashflow2.png",
+            "/AngheloDeArroz/images/projects/cashflow3.png"
         ],
         link: "https://github.com/AngheloDeArroz/CashFlowTracker"
     },
@@ -57,10 +57,10 @@ const projects = [
         color: "bg-emerald-500",
         height: "h-80",
         images: [
-            "/images/projects/homeservice.png",
-            "/images/projects/homeservice2.png",
-            "/images/projects/homeservice3.png",
-            "/images/projects/homeservice4.png"
+            "/AngheloDeArroz/images/projects/homeservice.png",
+            "/AngheloDeArroz/images/projects/homeservice2.png",
+            "/AngheloDeArroz/images/projects/homeservice3.png",
+            "/AngheloDeArroz/images/projects/homeservice4.png"
         ],
         link: "https://github.com/AngheloDeArroz/happyhome_services"
     }
