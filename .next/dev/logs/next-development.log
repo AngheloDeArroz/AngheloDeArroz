@@ -1,8 +1,27 @@
-[00:00:03.407] Server  LOG      ✓ Ready in 2.2s
-[00:00:12.382] Server  LOG      ○ Compiling / ...
-[00:00:27.451] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:31.206] Browser WARN    Image with src "/images/linkedinphoto.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:04:36.024] Server  LOG      ✓ Compiled in 1089ms
-[00:04:39.126] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:04:40.902] Server  LOG      ✓ Compiled in 486ms
-[00:04:40.903] Browser WARN    Image with src "/images/linkedinphoto.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:02.385] Server  LOG      ✓ Ready in 1675ms
+[00:00:15.015] Server  LOG      ○ Compiling / ...
+[00:00:51.525] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:53.734] Browser WARN    Image with src "/images/linkedinphoto.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:15.517] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:37.693] Server  LOG      ✓ Compiled in 1173ms
+[00:02:59.648] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:16.230] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:09.568] Server  LOG      ✓ Compiled in 1289ms
+[00:05:44.305] Browser WARN    Image with src "/images/linkedinphoto.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:29.508] Server  LOG      ✓ Compiled in 395ms
+[00:06:31.778] Server  LOG      ✓ Compiled in 581ms
+[00:06:40.355] Server  LOG      ✓ Compiled in 273ms
+[00:07:27.322] Server  LOG      ✓ Compiled in 617ms
+[00:08:46.987] Server  LOG      ✓ Compiled in 491ms
+[00:09:24.218] Server  LOG      ✓ Compiled in 409ms
+[00:11:18.082] Server  LOG      ✓ Compiled in 2.3s
+[00:12:06.764] Server  LOG      ✓ Compiled in 1446ms
+[00:12:25.158] Server  LOG      ✓ Compiled in 874ms
+[00:13:07.712] Server  LOG      ✓ Compiled in 1515ms
+[00:13:41.290] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:41.819] Browser WARN    Image with src "/images/linkedinphoto.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:14:00.807] Server  LOG      ✓ Compiled in 1514ms
+[00:14:17.903] Server  LOG      ✓ Compiled in 1083ms
+[00:14:41.275] Server  LOG      ✓ Compiled in 788ms
+[00:15:27.945] Server  LOG      ✓ Compiled in 870ms
+[00:15:29.400] Server  LOG      ✓ Compiled in 423ms

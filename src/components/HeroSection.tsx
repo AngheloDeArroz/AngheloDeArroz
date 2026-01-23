@@ -221,9 +221,9 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Left/Top Text Block */}
-      <div className="absolute z-30 flex flex-col items-start gap-2 select-none pointer-events-none left-6 top-[30%] md:left-32 md:top-[38%]">
-        <div className="flex flex-col text-white font-normal leading-tight text-2xl md:text-3xl">
+      {/* Left/Top (Desktop) -> Right/Bottom (Mobile) Text Block */}
+      <div className="absolute z-30 flex flex-col items-end md:items-start gap-2 select-none pointer-events-none right-6 bottom-16 md:right-auto md:left-32 md:top-[38%] md:bottom-auto">
+        <div className="flex flex-col text-white font-normal leading-tight text-2xl md:text-3xl text-right md:text-left">
           <span>Developer | Programmer</span>
           <span>Pursuing excellence</span>
         </div>
@@ -232,10 +232,10 @@ const HeroSection = () => {
       {/* Marquee Text */}
       <div
         ref={marqueeRef}
-        className="absolute bottom-90 md:bottom-40 flex whitespace-nowrap text-[25vw] md:text-[15vw] font-normal leading-none tracking-tight z-30 text-white select-none cursor-default"
+        className="absolute bottom-72 md:bottom-32 flex whitespace-nowrap text-[35vw] md:text-[18vw] font-semibold leading-none tracking-tight z-30 text-white select-none cursor-default"
       >
-        <span className="mr-20"> — Anghelo Dearroz</span>
-        <span className="mr-20"> — Anghelo Dearroz</span>
+        <span className="mr-20"> — Anghelo De Arroz</span>
+        <span className="mr-20"> — Anghelo De Arroz</span>
       </div>
     </section>
   );

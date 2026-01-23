@@ -10,7 +10,7 @@ const certificates = [
         date: "November 2025",
         credentialId: "AWS-FG-2025-1112",
         description: "Foundational-level certification demonstrating expertise in basic cloud concepts and AWS services.",
-        imagePath: "/images/certificate_images/AWS_Cloud_Foundations.png", 
+        imagePath: "/images/certificate_images/AWS_Cloud_Foundations.png",
     },
     {
         id: 2,
@@ -64,7 +64,7 @@ export default function CertificationsSection() {
     const currentCert = certificates[currentIndex];
 
     return (
-        <section className="min-h-0 bg-white pt-8 pb-20 px-4 md:px-12 relative z-20">
+        <section className="min-h-0 bg-white pt-16 pb-20 px-4 md:px-12 relative z-20">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-12">
                     <h2 className="text-4xl md:text-6xl font-bold mb-4 tracking-tighter text-gray-900">
@@ -75,26 +75,26 @@ export default function CertificationsSection() {
 
                 <div className="relative max-w-6xl mx-auto">
                     {/* Navigation Arrows */}
-                    <button onClick={handlePrevious} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-16 z-30 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-md hover:scale-110 transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-6 h-6 md:w-8 md:h-8 text-gray-800">
+                    <button onClick={handlePrevious} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-8 md:-translate-x-16 lg:-translate-x-20 z-30 transition-opacity hover:opacity-70">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-8 h-8 md:w-10 md:h-10 text-gray-800">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                         </svg>
                     </button>
 
-                    <button onClick={handleNext} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-16 z-30 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-md hover:scale-110 transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-6 h-6 md:w-8 md:h-8 text-gray-800">
+                    <button onClick={handleNext} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-8 md:translate-x-16 lg:translate-x-20 z-30 transition-opacity hover:opacity-70">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-8 h-8 md:w-10 md:h-10 text-gray-800">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                         </svg>
                     </button>
 
                     {/* Main Card */}
                     <div className="bg-gray-50 rounded-3xl overflow-hidden shadow-2xl border border-gray-100 flex flex-col lg:flex-row min-h-[500px]">
-                        
+
                         {/* Image Side */}
                         <div className="w-full lg:w-3/5 bg-neutral-100 flex items-center justify-center p-6 md:p-10">
                             <div className="relative w-full h-full flex items-center justify-center">
-                                <img 
-                                    src={currentCert.imagePath} 
+                                <img
+                                    src={currentCert.imagePath}
                                     alt={currentCert.title}
                                     className="max-w-full max-h-[450px] object-contain shadow-lg rounded-sm"
                                 />
@@ -104,12 +104,12 @@ export default function CertificationsSection() {
                         {/* Info Side */}
                         <div className="w-full lg:w-2/5 p-8 lg:p-12 flex flex-col justify-center bg-white border-l border-gray-50">
                             {/* Removed Official Badge Section */}
-                            
+
                             <h3 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-3 leading-tight tracking-tight">
                                 {currentCert.title}
                             </h3>
                             <p className="text-xl font-bold text-blue-600 mb-6">{currentCert.issuer}</p>
-                            
+
                             <p className="text-gray-500 mb-8 leading-relaxed text-sm md:text-base">
                                 {currentCert.description}
                             </p>

@@ -464,11 +464,11 @@ var _s = __turbopack_context__.k.signature();
 const HeroSection = ()=>{
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(23);
-    if ($[0] !== "4b5ecfc0fc87e0408298f48eca0c5f67c39dd2cadd6d457c4b356fac8d66ca3e") {
+    if ($[0] !== "3163d74b8c5c289fa8566ff2fda08db3e5804fa909e5a07db82a10bf33beb03b") {
         for(let $i = 0; $i < 23; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "4b5ecfc0fc87e0408298f48eca0c5f67c39dd2cadd6d457c4b356fac8d66ca3e";
+        $[0] = "3163d74b8c5c289fa8566ff2fda08db3e5804fa909e5a07db82a10bf33beb03b";
     }
     const marqueeRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const navbarRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
@@ -920,29 +920,29 @@ const HeroSection = ()=>{
     let t16;
     if ($[19] === Symbol.for("react.memo_cache_sentinel")) {
         t16 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "absolute z-30 flex flex-col items-start gap-2 select-none pointer-events-none left-6 top-[30%] md:left-32 md:top-[38%]",
+            className: "absolute z-30 flex flex-col items-end md:items-start gap-2 select-none pointer-events-none right-6 bottom-16 md:right-auto md:left-32 md:top-[38%] md:bottom-auto",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex flex-col text-white font-normal leading-tight text-2xl md:text-3xl",
+                className: "flex flex-col text-white font-normal leading-tight text-2xl md:text-3xl text-right md:text-left",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         children: "Developer | Programmer"
                     }, void 0, false, {
                         fileName: "[project]/src/components/HeroSection.tsx",
                         lineNumber: 257,
-                        columnNumber: 236
+                        columnNumber: 303
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         children: "Pursuing excellence"
                     }, void 0, false, {
                         fileName: "[project]/src/components/HeroSection.tsx",
                         lineNumber: 257,
-                        columnNumber: 271
+                        columnNumber: 338
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/HeroSection.tsx",
                 lineNumber: 257,
-                columnNumber: 147
+                columnNumber: 190
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/components/HeroSection.tsx",
@@ -957,23 +957,23 @@ const HeroSection = ()=>{
     if ($[20] === Symbol.for("react.memo_cache_sentinel")) {
         t17 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             ref: marqueeRef,
-            className: "absolute bottom-90 md:bottom-40 flex whitespace-nowrap text-[25vw] md:text-[15vw] font-normal leading-none tracking-tight z-30 text-white select-none cursor-default",
+            className: "absolute bottom-72 md:bottom-32 flex whitespace-nowrap text-[35vw] md:text-[18vw] font-semibold leading-none tracking-tight z-30 text-white select-none cursor-default",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                     className: "mr-20",
-                    children: " — Anghelo Dearroz"
+                    children: " — Anghelo De Arroz"
                 }, void 0, false, {
                     fileName: "[project]/src/components/HeroSection.tsx",
                     lineNumber: 264,
-                    columnNumber: 210
+                    columnNumber: 212
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                     className: "mr-20",
-                    children: " — Anghelo Dearroz"
+                    children: " — Anghelo De Arroz"
                 }, void 0, false, {
                     fileName: "[project]/src/components/HeroSection.tsx",
                     lineNumber: 264,
-                    columnNumber: 259
+                    columnNumber: 262
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
@@ -1559,11 +1559,11 @@ const certificates = [
 function CertificationsSection() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(35);
-    if ($[0] !== "f3c968f62c503d80489ffbe1be1614df6c043a1a640375364f2b713b18c0cfe3") {
+    if ($[0] !== "38fdb0b9dfcf4d5a276f3450002d17bf8363695f0c56d9ca08a3fbf6e533fcb0") {
         for(let $i = 0; $i < 35; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "f3c968f62c503d80489ffbe1be1614df6c043a1a640375364f2b713b18c0cfe3";
+        $[0] = "38fdb0b9dfcf4d5a276f3450002d17bf8363695f0c56d9ca08a3fbf6e533fcb0";
     }
     const [currentIndex, setCurrentIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
     let t0;
@@ -1635,14 +1635,14 @@ function CertificationsSection() {
     if ($[4] === Symbol.for("react.memo_cache_sentinel")) {
         t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
             onClick: handlePrevious,
-            className: "absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-16 z-30 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-md hover:scale-110 transition-all",
+            className: "absolute left-0 top-1/2 -translate-y-1/2 -translate-x-8 md:-translate-x-16 lg:-translate-x-20 z-30 transition-opacity hover:opacity-70",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
                 fill: "none",
                 viewBox: "0 0 24 24",
-                strokeWidth: 3,
+                strokeWidth: 2.5,
                 stroke: "currentColor",
-                className: "w-6 h-6 md:w-8 md:h-8 text-gray-800",
+                className: "w-8 h-8 md:w-10 md:h-10 text-gray-800",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     strokeLinecap: "round",
                     strokeLinejoin: "round",
@@ -1650,12 +1650,12 @@ function CertificationsSection() {
                 }, void 0, false, {
                     fileName: "[project]/src/components/CertificationsSection.tsx",
                     lineNumber: 89,
-                    columnNumber: 380
+                    columnNumber: 352
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/CertificationsSection.tsx",
                 lineNumber: 89,
-                columnNumber: 222
+                columnNumber: 190
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/CertificationsSection.tsx",
@@ -1670,14 +1670,14 @@ function CertificationsSection() {
     if ($[5] === Symbol.for("react.memo_cache_sentinel")) {
         t4 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
             onClick: handleNext,
-            className: "absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-16 z-30 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-md hover:scale-110 transition-all",
+            className: "absolute right-0 top-1/2 -translate-y-1/2 translate-x-8 md:translate-x-16 lg:translate-x-20 z-30 transition-opacity hover:opacity-70",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
                 fill: "none",
                 viewBox: "0 0 24 24",
-                strokeWidth: 3,
+                strokeWidth: 2.5,
                 stroke: "currentColor",
-                className: "w-6 h-6 md:w-8 md:h-8 text-gray-800",
+                className: "w-8 h-8 md:w-10 md:h-10 text-gray-800",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     strokeLinecap: "round",
                     strokeLinejoin: "round",
@@ -1685,12 +1685,12 @@ function CertificationsSection() {
                 }, void 0, false, {
                     fileName: "[project]/src/components/CertificationsSection.tsx",
                     lineNumber: 96,
-                    columnNumber: 375
+                    columnNumber: 346
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/CertificationsSection.tsx",
                 lineNumber: 96,
-                columnNumber: 217
+                columnNumber: 184
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/CertificationsSection.tsx",
@@ -1947,7 +1947,7 @@ function CertificationsSection() {
     let t17;
     if ($[32] !== t14 || $[33] !== t16) {
         t17 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-            className: "min-h-0 bg-white pt-8 pb-20 px-4 md:px-12 relative z-20",
+            className: "min-h-0 bg-white pt-16 pb-20 px-4 md:px-12 relative z-20",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "max-w-7xl mx-auto",
                 children: [
@@ -1963,13 +1963,13 @@ function CertificationsSection() {
                     }, void 0, true, {
                         fileName: "[project]/src/components/CertificationsSection.tsx",
                         lineNumber: 205,
-                        columnNumber: 127
+                        columnNumber: 128
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/CertificationsSection.tsx",
                 lineNumber: 205,
-                columnNumber: 88
+                columnNumber: 89
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/CertificationsSection.tsx",
@@ -2102,11 +2102,11 @@ const projects = [
 ];
 function ProjectsSection() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(3);
-    if ($[0] !== "1dd249bab5b07f435665cd879fe2b2cf5f715e1aa312579a8a3bab8fbcaf46b1") {
+    if ($[0] !== "e8b49f76581a7591bee0bc4392478e3d9ed914286398f8ff1a77a53a7bc5979e") {
         for(let $i = 0; $i < 3; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "1dd249bab5b07f435665cd879fe2b2cf5f715e1aa312579a8a3bab8fbcaf46b1";
+        $[0] = "e8b49f76581a7591bee0bc4392478e3d9ed914286398f8ff1a77a53a7bc5979e";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -2114,16 +2114,16 @@ function ProjectsSection() {
             className: "mb-16",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                    className: "text-4xl md:text-6xl font-bold mb-4 tracking-tighter text-white uppercase italic",
+                    className: "text-4xl md:text-6xl font-bold mb-4 tracking-tighter text-white",
                     children: [
                         "Selected ",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            className: "opacity-70 not-italic",
+                            className: "opacity-70",
                             children: "Works"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ProjectsSection.tsx",
                             lineNumber: 53,
-                            columnNumber: 139
+                            columnNumber: 122
                         }, this)
                     ]
                 }, void 0, true, {
@@ -2136,7 +2136,7 @@ function ProjectsSection() {
                 }, void 0, false, {
                     fileName: "[project]/src/components/ProjectsSection.tsx",
                     lineNumber: 53,
-                    columnNumber: 196
+                    columnNumber: 168
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                     className: "mt-8 text-white/90 max-w-2xl text-xl leading-relaxed",
@@ -2144,7 +2144,7 @@ function ProjectsSection() {
                 }, void 0, false, {
                     fileName: "[project]/src/components/ProjectsSection.tsx",
                     lineNumber: 53,
-                    columnNumber: 248
+                    columnNumber: 220
                 }, this)
             ]
         }, void 0, true, {
@@ -2159,7 +2159,7 @@ function ProjectsSection() {
     let t1;
     if ($[2] === Symbol.for("react.memo_cache_sentinel")) {
         t1 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-            className: "min-h-0 bg-[#9a9a98] text-white pt-20 pb-20 px-4 md:px-12 relative z-20",
+            className: "min-h-0 bg-[#9a9a98] text-white pt-20 pb-16 px-4 md:px-12 relative z-20",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "max-w-7xl mx-auto",
                 children: [
@@ -2202,11 +2202,11 @@ function _ProjectsSectionProjectsMap(project) {
 function ProjectCard(t0) {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(47);
-    if ($[0] !== "1dd249bab5b07f435665cd879fe2b2cf5f715e1aa312579a8a3bab8fbcaf46b1") {
+    if ($[0] !== "e8b49f76581a7591bee0bc4392478e3d9ed914286398f8ff1a77a53a7bc5979e") {
         for(let $i = 0; $i < 47; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "1dd249bab5b07f435665cd879fe2b2cf5f715e1aa312579a8a3bab8fbcaf46b1";
+        $[0] = "e8b49f76581a7591bee0bc4392478e3d9ed914286398f8ff1a77a53a7bc5979e";
     }
     const { project } = t0;
     const [currentIndex, setCurrentIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
@@ -2537,7 +2537,7 @@ _s(ProjectCard, "92jvCy9DnWhtTqKvapMIyzkQScY=");
 _c1 = ProjectCard;
 function _ProjectCardProjectTagsMap(tag) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-        className: "px-3 py-1 text-[9px] font-black uppercase tracking-widest rounded-md bg-gray-100 text-gray-400 border border-gray-200 transition-colors group-hover:bg-gray-900 group-hover:text-white group-hover:border-gray-900",
+        className: "px-3 py-1 text-[9px] font-bold uppercase tracking-widest rounded-md bg-gray-100 text-gray-400 border border-gray-200 transition-colors group-hover:bg-gray-900 group-hover:text-white group-hover:border-gray-900",
         children: tag
     }, tag, false, {
         fileName: "[project]/src/components/ProjectsSection.tsx",

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/stacksans_a809cc9f.module.css"],"sourcesContent":["@font-face {\n    \nfont-family: 'stackSans';\n    src: url('@vercel/turbopack-next/internal/font/local/font?{%22path%22:%22../../public/font/StackSansText-VariableFont_wght.ttf%22,%22preload%22:true,%22has_size_adjust%22:true}') format('truetype');\n    font-display: swap;\n    \nfont-weight: 100 900;\n}\n\n@font-face {\n    font-family: 'stackSans Fallback';\n    src: local(\"Arial\");\n    ascent-override: 91.14%;\ndescent-override: 27.34%;\nline-gap-override: 0.00%;\nsize-adjust: 109.72%;\n\n}\n\n.className {\n    font-family: 'stackSans', 'stackSans Fallback';\n    \n}\n.variable {\n    --font-stack-sans: 'stackSans', 'stackSans Fallback';\n}\n\n"],"names":[],"mappings":"AAAA;;;;;;;AASA;;;;;;;;;AAUA;;;;AAIA"}}]
+}

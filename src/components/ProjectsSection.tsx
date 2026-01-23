@@ -68,15 +68,15 @@ const projects = [
 
 export default function ProjectsSection() {
     return (
-        <section className="min-h-0 bg-[#9a9a98] text-white pt-20 pb-20 px-4 md:px-12 relative z-20">
+        <section className="min-h-0 bg-[#9a9a98] text-white pt-20 pb-16 px-4 md:px-12 relative z-20">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-16">
-                    <h2 className="text-4xl md:text-6xl font-bold mb-4 tracking-tighter text-white uppercase italic">
-                        Selected <span className="opacity-70 not-italic">Works</span>
+                    <h2 className="text-4xl md:text-6xl font-bold mb-4 tracking-tighter text-white">
+                        Selected <span className="opacity-70">Works</span>
                     </h2>
                     <div className="h-1.5 w-24 bg-white rounded-full"></div>
                     <p className="mt-8 text-white/90 max-w-2xl text-xl leading-relaxed">
-                        A collection of mobile solutions, web platforms, and desktop tools. 
+                        A collection of mobile solutions, web platforms, and desktop tools.
                         Bridging the gap between hardware and software.
                     </p>
                 </div>
@@ -97,60 +97,58 @@ function ProjectCard({ project }: { project: any }) {
 
     useEffect(() => {
         let interval: NodeJS.Timeout;
-        
+
         if (isHovered && project.images.length > 1) {
             // Jump to second image immediately for visual feedback
-            setCurrentIndex(1); 
-            
+            setCurrentIndex(1);
+
             interval = setInterval(() => {
                 setCurrentIndex((prev) => (prev + 1) % project.images.length);
-            }, 1000); 
+            }, 1000);
         } else {
             setCurrentIndex(0);
         }
-        
+
         return () => clearInterval(interval);
     }, [isHovered, project.images.length]);
 
     return (
-        <div 
+        <div
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             className="break-inside-avoid group relative bg-white rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-4"
         >
-            <a 
-                href={project.link} 
-                target="_blank" 
-                rel="noopener noreferrer" 
+            <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="absolute inset-0 z-20"
             />
 
             <div className={`relative w-full ${project.height} overflow-hidden ${project.color}`}>
                 {project.images.map((img: string, index: number) => (
-                    <Image 
+                    <Image
                         key={`${project.id}-${index}`}
                         src={img}
                         alt={`${project.title} screenshot ${index + 1}`}
                         fill
-                        className={`object-cover object-top transition-opacity duration-500 ${
-                            index === currentIndex ? "opacity-100 scale-105" : "opacity-0"
-                        }`}
+                        className={`object-cover object-top transition-opacity duration-500 ${index === currentIndex ? "opacity-100 scale-105" : "opacity-0"
+                            }`}
                         sizes="(max-width: 768px) 100vw, 50vw"
                         priority={project.id <= 2}
                     />
                 ))}
-                
+
                 <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent" />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500 z-10" />
-                
+
                 {project.images.length > 1 && (
                     <div className={`absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-1.5 transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
                         {project.images.map((_: any, i: number) => (
-                            <div 
+                            <div
                                 key={i}
-                                className={`h-1 rounded-full transition-all duration-300 ${
-                                    i === currentIndex ? "w-6 bg-white" : "w-1.5 bg-white/40"
-                                }`}
+                                className={`h-1 rounded-full transition-all duration-300 ${i === currentIndex ? "w-6 bg-white" : "w-1.5 bg-white/40"
+                                    }`}
                             />
                         ))}
                     </div>
@@ -162,7 +160,7 @@ function ProjectCard({ project }: { project: any }) {
                     <h3 className="text-2xl font-bold text-gray-900 tracking-tight leading-tight">
                         {project.title}
                     </h3>
-                    
+
                     <div className="relative z-30 w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-transform duration-500 shadow-xl flex-shrink-0">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
@@ -176,9 +174,9 @@ function ProjectCard({ project }: { project: any }) {
 
                 <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag: string) => (
-                        <span 
-                            key={tag} 
-                            className="px-3 py-1 text-[9px] font-black uppercase tracking-widest rounded-md bg-gray-100 text-gray-400 border border-gray-200 transition-colors group-hover:bg-gray-900 group-hover:text-white group-hover:border-gray-900"
+                        <span
+                            key={tag}
+                            className="px-3 py-1 text-[9px] font-bold uppercase tracking-widest rounded-md bg-gray-100 text-gray-400 border border-gray-200 transition-colors group-hover:bg-gray-900 group-hover:text-white group-hover:border-gray-900"
                         >
                             {tag}
                         </span>
