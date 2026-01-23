@@ -1424,7 +1424,11 @@ __turbopack_context__.s([
     ()=>ProjectsSection
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-ssr] (ecmascript)");
 "use client";
+;
+;
 ;
 const projects = [
     {
@@ -1439,7 +1443,12 @@ const projects = [
         ],
         color: "bg-blue-600",
         height: "h-96",
-        image: "/images/projects/rrj-flutter.png",
+        images: [
+            "/images/projects/rrjapp.png",
+            "/images/projects/rrjapp2.png",
+            "/images/projects/rrjapp3.png",
+            "/images/projects/rrjapp4.png"
+        ],
         link: "https://github.com/AngheloDeArroz/RRJ_Watch"
     },
     {
@@ -1454,26 +1463,17 @@ const projects = [
         ],
         color: "bg-cyan-500",
         height: "h-72",
-        image: "/images/projects/rrj-web.png",
+        images: [
+            "/images/projects/rrjweb.png",
+            "/images/projects/rrjweb2.png",
+            "/images/projects/rrjweb3.png",
+            "/images/projects/rrjwatch4.png",
+            "/images/projects/rrjwatch5.png"
+        ],
         link: "https://github.com/AngheloDeArroz/RRJ_Watch_Web"
     },
     {
         id: 3,
-        title: "HappyHome Services",
-        description: "A professional platform connecting homeowners with service providers. Features AWS S3 image storage and WorkOS for enterprise-grade authentication.",
-        tags: [
-            "Next.js",
-            "MongoDB",
-            "AWS S3",
-            "WorkOS"
-        ],
-        color: "bg-emerald-500",
-        height: "h-80",
-        image: "/images/projects/happyhome.png",
-        link: "https://github.com/AngheloDeArroz/happyhome_services"
-    },
-    {
-        id: 4,
         title: "Cashflow Tracker",
         description: "A sleek, dark-themed desktop financial tool built with Python. Leverages CustomTkinter for the UI and MySQL for secure data persistence.",
         tags: [
@@ -1484,8 +1484,32 @@ const projects = [
         ],
         color: "bg-neutral-800",
         height: "h-96",
-        image: "/images/projects/cashflow.png",
+        images: [
+            "/images/projects/cashflow.png",
+            "/images/projects/cashflow2.png",
+            "/images/projects/cashflow3.png"
+        ],
         link: "https://github.com/AngheloDeArroz/CashFlowTracker"
+    },
+    {
+        id: 4,
+        title: "HappyHome Services",
+        description: "A professional platform connecting homeowners with service providers. Features AWS S3 image storage and WorkOS for enterprise-grade authentication.",
+        tags: [
+            "Next.js",
+            "MongoDB",
+            "AWS S3",
+            "WorkOS"
+        ],
+        color: "bg-emerald-500",
+        height: "h-80",
+        images: [
+            "/images/projects/homeservice.png",
+            "/images/projects/homeservice2.png",
+            "/images/projects/homeservice3.png",
+            "/images/projects/homeservice4.png"
+        ],
+        link: "https://github.com/AngheloDeArroz/happyhome_services"
     }
 ];
 function ProjectsSection() {
@@ -1506,20 +1530,20 @@ function ProjectsSection() {
                                     children: "Works"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ProjectsSection.tsx",
-                                    lineNumber: 55,
+                                    lineNumber: 75,
                                     columnNumber: 34
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/ProjectsSection.tsx",
-                            lineNumber: 54,
+                            lineNumber: 74,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "h-1.5 w-24 bg-white rounded-full"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ProjectsSection.tsx",
-                            lineNumber: 57,
+                            lineNumber: 77,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1527,13 +1551,13 @@ function ProjectsSection() {
                             children: "A collection of mobile solutions, web platforms, and desktop tools. Bridging the gap between hardware and software."
                         }, void 0, false, {
                             fileName: "[project]/src/components/ProjectsSection.tsx",
-                            lineNumber: 58,
+                            lineNumber: 78,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/ProjectsSection.tsx",
-                    lineNumber: 53,
+                    lineNumber: 73,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1542,28 +1566,48 @@ function ProjectsSection() {
                             project: project
                         }, project.id, false, {
                             fileName: "[project]/src/components/ProjectsSection.tsx",
-                            lineNumber: 66,
+                            lineNumber: 86,
                             columnNumber: 25
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/src/components/ProjectsSection.tsx",
-                    lineNumber: 64,
+                    lineNumber: 84,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/ProjectsSection.tsx",
-            lineNumber: 52,
+            lineNumber: 72,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/ProjectsSection.tsx",
-        lineNumber: 51,
+        lineNumber: 71,
         columnNumber: 9
     }, this);
 }
 function ProjectCard({ project }) {
+    const [currentIndex, setCurrentIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
+    const [isHovered, setIsHovered] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        let interval;
+        if (isHovered && project.images.length > 1) {
+            // Jump to second image immediately for visual feedback
+            setCurrentIndex(1);
+            interval = setInterval(()=>{
+                setCurrentIndex((prev)=>(prev + 1) % project.images.length);
+            }, 1000);
+        } else {
+            setCurrentIndex(0);
+        }
+        return ()=>clearInterval(interval);
+    }, [
+        isHovered,
+        project.images.length
+    ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        onMouseEnter: ()=>setIsHovered(true),
+        onMouseLeave: ()=>setIsHovered(false),
         className: "break-inside-avoid group relative bg-white rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-4",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1573,38 +1617,56 @@ function ProjectCard({ project }) {
                 className: "absolute inset-0 z-20"
             }, void 0, false, {
                 fileName: "[project]/src/components/ProjectsSection.tsx",
-                lineNumber: 79,
+                lineNumber: 121,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: `relative w-full ${project.height} overflow-hidden ${project.color}`,
                 children: [
+                    project.images.map((img, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                            src: img,
+                            alt: `${project.title} screenshot ${index + 1}`,
+                            fill: true,
+                            className: `object-cover object-top transition-opacity duration-500 ${index === currentIndex ? "opacity-100 scale-105" : "opacity-0"}`,
+                            sizes: "(max-width: 768px) 100vw, 50vw",
+                            priority: project.id <= 2
+                        }, `${project.id}-${index}`, false, {
+                            fileName: "[project]/src/components/ProjectsSection.tsx",
+                            lineNumber: 130,
+                            columnNumber: 21
+                        }, this)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"
                     }, void 0, false, {
                         fileName: "[project]/src/components/ProjectsSection.tsx",
-                        lineNumber: 88,
+                        lineNumber: 143,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500 z-10"
                     }, void 0, false, {
                         fileName: "[project]/src/components/ProjectsSection.tsx",
-                        lineNumber: 89,
+                        lineNumber: 144,
                         columnNumber: 17
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute inset-0 flex items-center justify-center text-white/20 font-black text-2xl uppercase tracking-[0.2em] text-center px-6",
-                        children: project.title
+                    project.images.length > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: `absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-1.5 transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`,
+                        children: project.images.map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: `h-1 rounded-full transition-all duration-300 ${i === currentIndex ? "w-6 bg-white" : "w-1.5 bg-white/40"}`
+                            }, i, false, {
+                                fileName: "[project]/src/components/ProjectsSection.tsx",
+                                lineNumber: 149,
+                                columnNumber: 29
+                            }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/components/ProjectsSection.tsx",
-                        lineNumber: 91,
-                        columnNumber: 17
+                        lineNumber: 147,
+                        columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ProjectsSection.tsx",
-                lineNumber: 87,
+                lineNumber: 128,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1618,14 +1680,11 @@ function ProjectCard({ project }) {
                                 children: project.title
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ProjectsSection.tsx",
-                                lineNumber: 99,
+                                lineNumber: 162,
                                 columnNumber: 21
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                href: project.link,
-                                target: "_blank",
-                                rel: "noopener noreferrer",
-                                className: "relative z-30 w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-transform duration-500 shadow-xl flex-shrink-0 hover:bg-blue-600",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "relative z-30 w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-transform duration-500 shadow-xl flex-shrink-0",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                                     xmlns: "http://www.w3.org/2000/svg",
                                     fill: "none",
@@ -1639,23 +1698,23 @@ function ProjectCard({ project }) {
                                         d: "M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ProjectsSection.tsx",
-                                        lineNumber: 111,
+                                        lineNumber: 168,
                                         columnNumber: 29
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ProjectsSection.tsx",
-                                    lineNumber: 110,
+                                    lineNumber: 167,
                                     columnNumber: 25
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ProjectsSection.tsx",
-                                lineNumber: 104,
+                                lineNumber: 166,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/ProjectsSection.tsx",
-                        lineNumber: 98,
+                        lineNumber: 161,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1663,7 +1722,7 @@ function ProjectCard({ project }) {
                         children: project.description
                     }, void 0, false, {
                         fileName: "[project]/src/components/ProjectsSection.tsx",
-                        lineNumber: 116,
+                        lineNumber: 173,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1673,24 +1732,24 @@ function ProjectCard({ project }) {
                                 children: tag
                             }, tag, false, {
                                 fileName: "[project]/src/components/ProjectsSection.tsx",
-                                lineNumber: 123,
+                                lineNumber: 179,
                                 columnNumber: 25
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/components/ProjectsSection.tsx",
-                        lineNumber: 121,
+                        lineNumber: 177,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ProjectsSection.tsx",
-                lineNumber: 97,
+                lineNumber: 160,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/ProjectsSection.tsx",
-        lineNumber: 76,
+        lineNumber: 116,
         columnNumber: 9
     }, this);
 }

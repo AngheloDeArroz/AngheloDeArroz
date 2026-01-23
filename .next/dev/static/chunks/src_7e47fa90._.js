@@ -2010,7 +2010,12 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/compiler-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
 "use client";
+;
 ;
 ;
 const projects = [
@@ -2026,7 +2031,12 @@ const projects = [
         ],
         color: "bg-blue-600",
         height: "h-96",
-        image: "/images/projects/rrj-flutter.png",
+        images: [
+            "/images/projects/rrjapp.png",
+            "/images/projects/rrjapp2.png",
+            "/images/projects/rrjapp3.png",
+            "/images/projects/rrjapp4.png"
+        ],
         link: "https://github.com/AngheloDeArroz/RRJ_Watch"
     },
     {
@@ -2041,26 +2051,17 @@ const projects = [
         ],
         color: "bg-cyan-500",
         height: "h-72",
-        image: "/images/projects/rrj-web.png",
+        images: [
+            "/images/projects/rrjweb.png",
+            "/images/projects/rrjweb2.png",
+            "/images/projects/rrjweb3.png",
+            "/images/projects/rrjwatch4.png",
+            "/images/projects/rrjwatch5.png"
+        ],
         link: "https://github.com/AngheloDeArroz/RRJ_Watch_Web"
     },
     {
         id: 3,
-        title: "HappyHome Services",
-        description: "A professional platform connecting homeowners with service providers. Features AWS S3 image storage and WorkOS for enterprise-grade authentication.",
-        tags: [
-            "Next.js",
-            "MongoDB",
-            "AWS S3",
-            "WorkOS"
-        ],
-        color: "bg-emerald-500",
-        height: "h-80",
-        image: "/images/projects/happyhome.png",
-        link: "https://github.com/AngheloDeArroz/happyhome_services"
-    },
-    {
-        id: 4,
         title: "Cashflow Tracker",
         description: "A sleek, dark-themed desktop financial tool built with Python. Leverages CustomTkinter for the UI and MySQL for secure data persistence.",
         tags: [
@@ -2071,17 +2072,41 @@ const projects = [
         ],
         color: "bg-neutral-800",
         height: "h-96",
-        image: "/images/projects/cashflow.png",
+        images: [
+            "/images/projects/cashflow.png",
+            "/images/projects/cashflow2.png",
+            "/images/projects/cashflow3.png"
+        ],
         link: "https://github.com/AngheloDeArroz/CashFlowTracker"
+    },
+    {
+        id: 4,
+        title: "HappyHome Services",
+        description: "A professional platform connecting homeowners with service providers. Features AWS S3 image storage and WorkOS for enterprise-grade authentication.",
+        tags: [
+            "Next.js",
+            "MongoDB",
+            "AWS S3",
+            "WorkOS"
+        ],
+        color: "bg-emerald-500",
+        height: "h-80",
+        images: [
+            "/images/projects/homeservice.png",
+            "/images/projects/homeservice2.png",
+            "/images/projects/homeservice3.png",
+            "/images/projects/homeservice4.png"
+        ],
+        link: "https://github.com/AngheloDeArroz/happyhome_services"
     }
 ];
 function ProjectsSection() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(3);
-    if ($[0] !== "22fe157a0686a234beae998dd45dc544572c2059c48f7379b4f498819c2f9131") {
+    if ($[0] !== "1dd249bab5b07f435665cd879fe2b2cf5f715e1aa312579a8a3bab8fbcaf46b1") {
         for(let $i = 0; $i < 3; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "22fe157a0686a234beae998dd45dc544572c2059c48f7379b4f498819c2f9131";
+        $[0] = "1dd249bab5b07f435665cd879fe2b2cf5f715e1aa312579a8a3bab8fbcaf46b1";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -2175,251 +2200,340 @@ function _ProjectsSectionProjectsMap(project) {
     }, this);
 }
 function ProjectCard(t0) {
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(32);
-    if ($[0] !== "22fe157a0686a234beae998dd45dc544572c2059c48f7379b4f498819c2f9131") {
-        for(let $i = 0; $i < 32; $i += 1){
+    _s();
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(47);
+    if ($[0] !== "1dd249bab5b07f435665cd879fe2b2cf5f715e1aa312579a8a3bab8fbcaf46b1") {
+        for(let $i = 0; $i < 47; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "22fe157a0686a234beae998dd45dc544572c2059c48f7379b4f498819c2f9131";
+        $[0] = "1dd249bab5b07f435665cd879fe2b2cf5f715e1aa312579a8a3bab8fbcaf46b1";
     }
     const { project } = t0;
+    const [currentIndex, setCurrentIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
+    const [isHovered, setIsHovered] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     let t1;
-    if ($[1] !== project.link) {
-        t1 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+    let t2;
+    if ($[1] !== isHovered || $[2] !== project.images.length) {
+        t1 = ({
+            "ProjectCard[useEffect()]": ()=>{
+                let interval;
+                if (isHovered && project.images.length > 1) {
+                    setCurrentIndex(1);
+                    interval = setInterval({
+                        "ProjectCard[useEffect() > setInterval()]": ()=>{
+                            setCurrentIndex({
+                                "ProjectCard[useEffect() > setInterval() > setCurrentIndex()]": (prev)=>(prev + 1) % project.images.length
+                            }["ProjectCard[useEffect() > setInterval() > setCurrentIndex()]"]);
+                        }
+                    }["ProjectCard[useEffect() > setInterval()]"], 1000);
+                } else {
+                    setCurrentIndex(0);
+                }
+                return ()=>clearInterval(interval);
+            }
+        })["ProjectCard[useEffect()]"];
+        t2 = [
+            isHovered,
+            project.images.length
+        ];
+        $[1] = isHovered;
+        $[2] = project.images.length;
+        $[3] = t1;
+        $[4] = t2;
+    } else {
+        t1 = $[3];
+        t2 = $[4];
+    }
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t1, t2);
+    let t3;
+    let t4;
+    if ($[5] === Symbol.for("react.memo_cache_sentinel")) {
+        t3 = ({
+            "ProjectCard[<div>.onMouseEnter]": ()=>setIsHovered(true)
+        })["ProjectCard[<div>.onMouseEnter]"];
+        t4 = ({
+            "ProjectCard[<div>.onMouseLeave]": ()=>setIsHovered(false)
+        })["ProjectCard[<div>.onMouseLeave]"];
+        $[5] = t3;
+        $[6] = t4;
+    } else {
+        t3 = $[5];
+        t4 = $[6];
+    }
+    let t5;
+    if ($[7] !== project.link) {
+        t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
             href: project.link,
             target: "_blank",
             rel: "noopener noreferrer",
             className: "absolute inset-0 z-20"
         }, void 0, false, {
             fileName: "[project]/src/components/ProjectsSection.tsx",
-            lineNumber: 83,
+            lineNumber: 131,
             columnNumber: 10
         }, this);
-        $[1] = project.link;
-        $[2] = t1;
+        $[7] = project.link;
+        $[8] = t5;
     } else {
-        t1 = $[2];
+        t5 = $[8];
     }
-    const t2 = `relative w-full ${project.height} overflow-hidden ${project.color}`;
-    let t3;
-    let t4;
-    if ($[3] === Symbol.for("react.memo_cache_sentinel")) {
-        t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    const t6 = `relative w-full ${project.height} overflow-hidden ${project.color}`;
+    let t7;
+    if ($[9] !== currentIndex || $[10] !== project.id || $[11] !== project.images || $[12] !== project.title) {
+        let t8;
+        if ($[14] !== currentIndex || $[15] !== project.id || $[16] !== project.title) {
+            t8 = ({
+                "ProjectCard[project.images.map()]": (img, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                        src: img,
+                        alt: `${project.title} screenshot ${index + 1}`,
+                        fill: true,
+                        className: `object-cover object-top transition-opacity duration-500 ${index === currentIndex ? "opacity-100 scale-105" : "opacity-0"}`,
+                        sizes: "(max-width: 768px) 100vw, 50vw",
+                        priority: project.id <= 2
+                    }, `${project.id}-${index}`, false, {
+                        fileName: "[project]/src/components/ProjectsSection.tsx",
+                        lineNumber: 143,
+                        columnNumber: 62
+                    }, this)
+            })["ProjectCard[project.images.map()]"];
+            $[14] = currentIndex;
+            $[15] = project.id;
+            $[16] = project.title;
+            $[17] = t8;
+        } else {
+            t8 = $[17];
+        }
+        t7 = project.images.map(t8);
+        $[9] = currentIndex;
+        $[10] = project.id;
+        $[11] = project.images;
+        $[12] = project.title;
+        $[13] = t7;
+    } else {
+        t7 = $[13];
+    }
+    let t8;
+    let t9;
+    if ($[18] === Symbol.for("react.memo_cache_sentinel")) {
+        t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"
         }, void 0, false, {
             fileName: "[project]/src/components/ProjectsSection.tsx",
-            lineNumber: 93,
+            lineNumber: 164,
             columnNumber: 10
         }, this);
-        t4 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        t9 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500 z-10"
         }, void 0, false, {
             fileName: "[project]/src/components/ProjectsSection.tsx",
-            lineNumber: 94,
+            lineNumber: 165,
             columnNumber: 10
         }, this);
-        $[3] = t3;
-        $[4] = t4;
+        $[18] = t8;
+        $[19] = t9;
     } else {
-        t3 = $[3];
-        t4 = $[4];
-    }
-    let t5;
-    if ($[5] !== project.title) {
-        t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "absolute inset-0 flex items-center justify-center text-white/20 font-black text-2xl uppercase tracking-[0.2em] text-center px-6",
-            children: project.title
-        }, void 0, false, {
-            fileName: "[project]/src/components/ProjectsSection.tsx",
-            lineNumber: 103,
-            columnNumber: 10
-        }, this);
-        $[5] = project.title;
-        $[6] = t5;
-    } else {
-        t5 = $[6];
-    }
-    let t6;
-    if ($[7] !== t2 || $[8] !== t5) {
-        t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: t2,
-            children: [
-                t3,
-                t4,
-                t5
-            ]
-        }, void 0, true, {
-            fileName: "[project]/src/components/ProjectsSection.tsx",
-            lineNumber: 111,
-            columnNumber: 10
-        }, this);
-        $[7] = t2;
-        $[8] = t5;
-        $[9] = t6;
-    } else {
-        t6 = $[9];
-    }
-    let t7;
-    if ($[10] !== project.title) {
-        t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-            className: "text-2xl font-bold text-gray-900 tracking-tight leading-tight",
-            children: project.title
-        }, void 0, false, {
-            fileName: "[project]/src/components/ProjectsSection.tsx",
-            lineNumber: 120,
-            columnNumber: 10
-        }, this);
-        $[10] = project.title;
-        $[11] = t7;
-    } else {
-        t7 = $[11];
-    }
-    let t8;
-    if ($[12] === Symbol.for("react.memo_cache_sentinel")) {
-        t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-            xmlns: "http://www.w3.org/2000/svg",
-            fill: "none",
-            viewBox: "0 0 24 24",
-            strokeWidth: 2.5,
-            stroke: "currentColor",
-            className: "w-4 h-4",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                d: "M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-            }, void 0, false, {
-                fileName: "[project]/src/components/ProjectsSection.tsx",
-                lineNumber: 128,
-                columnNumber: 142
-            }, this)
-        }, void 0, false, {
-            fileName: "[project]/src/components/ProjectsSection.tsx",
-            lineNumber: 128,
-            columnNumber: 10
-        }, this);
-        $[12] = t8;
-    } else {
-        t8 = $[12];
-    }
-    let t9;
-    if ($[13] !== project.link) {
-        t9 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-            href: project.link,
-            target: "_blank",
-            rel: "noopener noreferrer",
-            className: "relative z-30 w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-transform duration-500 shadow-xl flex-shrink-0 hover:bg-blue-600",
-            children: t8
-        }, void 0, false, {
-            fileName: "[project]/src/components/ProjectsSection.tsx",
-            lineNumber: 135,
-            columnNumber: 10
-        }, this);
-        $[13] = project.link;
-        $[14] = t9;
-    } else {
-        t9 = $[14];
+        t8 = $[18];
+        t9 = $[19];
     }
     let t10;
-    if ($[15] !== t7 || $[16] !== t9) {
-        t10 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "flex justify-between items-start mb-4",
-            children: [
-                t7,
-                t9
-            ]
-        }, void 0, true, {
+    if ($[20] !== currentIndex || $[21] !== isHovered || $[22] !== project.images) {
+        t10 = project.images.length > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: `absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-1.5 transition-opacity duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`,
+            children: project.images.map({
+                "ProjectCard[project.images.map()]": (_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: `h-1 rounded-full transition-all duration-300 ${i === currentIndex ? "w-6 bg-white" : "w-1.5 bg-white/40"}`
+                    }, i, false, {
+                        fileName: "[project]/src/components/ProjectsSection.tsx",
+                        lineNumber: 175,
+                        columnNumber: 56
+                    }, this)
+            }["ProjectCard[project.images.map()]"])
+        }, void 0, false, {
             fileName: "[project]/src/components/ProjectsSection.tsx",
-            lineNumber: 143,
-            columnNumber: 11
+            lineNumber: 174,
+            columnNumber: 40
         }, this);
-        $[15] = t7;
-        $[16] = t9;
-        $[17] = t10;
+        $[20] = currentIndex;
+        $[21] = isHovered;
+        $[22] = project.images;
+        $[23] = t10;
     } else {
-        t10 = $[17];
+        t10 = $[23];
     }
     let t11;
-    if ($[18] !== project.description) {
-        t11 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-            className: "text-gray-500 text-base leading-relaxed mb-6",
-            children: project.description
-        }, void 0, false, {
-            fileName: "[project]/src/components/ProjectsSection.tsx",
-            lineNumber: 152,
-            columnNumber: 11
-        }, this);
-        $[18] = project.description;
-        $[19] = t11;
-    } else {
-        t11 = $[19];
-    }
-    let t12;
-    if ($[20] !== project.tags) {
-        t12 = project.tags.map(_ProjectCardProjectTagsMap);
-        $[20] = project.tags;
-        $[21] = t12;
-    } else {
-        t12 = $[21];
-    }
-    let t13;
-    if ($[22] !== t12) {
-        t13 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "flex flex-wrap gap-2",
-            children: t12
-        }, void 0, false, {
-            fileName: "[project]/src/components/ProjectsSection.tsx",
-            lineNumber: 168,
-            columnNumber: 11
-        }, this);
-        $[22] = t12;
-        $[23] = t13;
-    } else {
-        t13 = $[23];
-    }
-    let t14;
-    if ($[24] !== t10 || $[25] !== t11 || $[26] !== t13) {
-        t14 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "p-8 bg-white relative",
+    if ($[24] !== t10 || $[25] !== t6 || $[26] !== t7) {
+        t11 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: t6,
             children: [
-                t10,
-                t11,
-                t13
-            ]
-        }, void 0, true, {
-            fileName: "[project]/src/components/ProjectsSection.tsx",
-            lineNumber: 176,
-            columnNumber: 11
-        }, this);
-        $[24] = t10;
-        $[25] = t11;
-        $[26] = t13;
-        $[27] = t14;
-    } else {
-        t14 = $[27];
-    }
-    let t15;
-    if ($[28] !== t1 || $[29] !== t14 || $[30] !== t6) {
-        t15 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "break-inside-avoid group relative bg-white rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-4",
-            children: [
-                t1,
-                t6,
-                t14
+                t7,
+                t8,
+                t9,
+                t10
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/ProjectsSection.tsx",
             lineNumber: 186,
             columnNumber: 11
         }, this);
-        $[28] = t1;
-        $[29] = t14;
-        $[30] = t6;
-        $[31] = t15;
+        $[24] = t10;
+        $[25] = t6;
+        $[26] = t7;
+        $[27] = t11;
     } else {
-        t15 = $[31];
+        t11 = $[27];
     }
-    return t15;
+    let t12;
+    if ($[28] !== project.title) {
+        t12 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+            className: "text-2xl font-bold text-gray-900 tracking-tight leading-tight",
+            children: project.title
+        }, void 0, false, {
+            fileName: "[project]/src/components/ProjectsSection.tsx",
+            lineNumber: 196,
+            columnNumber: 11
+        }, this);
+        $[28] = project.title;
+        $[29] = t12;
+    } else {
+        t12 = $[29];
+    }
+    let t13;
+    if ($[30] === Symbol.for("react.memo_cache_sentinel")) {
+        t13 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "relative z-30 w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-transform duration-500 shadow-xl flex-shrink-0",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                fill: "none",
+                viewBox: "0 0 24 24",
+                strokeWidth: 2.5,
+                stroke: "currentColor",
+                className: "w-4 h-4",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    d: "M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                }, void 0, false, {
+                    fileName: "[project]/src/components/ProjectsSection.tsx",
+                    lineNumber: 204,
+                    columnNumber: 341
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/components/ProjectsSection.tsx",
+                lineNumber: 204,
+                columnNumber: 209
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/src/components/ProjectsSection.tsx",
+            lineNumber: 204,
+            columnNumber: 11
+        }, this);
+        $[30] = t13;
+    } else {
+        t13 = $[30];
+    }
+    let t14;
+    if ($[31] !== t12) {
+        t14 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "flex justify-between items-start mb-4",
+            children: [
+                t12,
+                t13
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/ProjectsSection.tsx",
+            lineNumber: 211,
+            columnNumber: 11
+        }, this);
+        $[31] = t12;
+        $[32] = t14;
+    } else {
+        t14 = $[32];
+    }
+    let t15;
+    if ($[33] !== project.description) {
+        t15 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+            className: "text-gray-500 text-base leading-relaxed mb-6",
+            children: project.description
+        }, void 0, false, {
+            fileName: "[project]/src/components/ProjectsSection.tsx",
+            lineNumber: 219,
+            columnNumber: 11
+        }, this);
+        $[33] = project.description;
+        $[34] = t15;
+    } else {
+        t15 = $[34];
+    }
+    let t16;
+    if ($[35] !== project.tags) {
+        t16 = project.tags.map(_ProjectCardProjectTagsMap);
+        $[35] = project.tags;
+        $[36] = t16;
+    } else {
+        t16 = $[36];
+    }
+    let t17;
+    if ($[37] !== t16) {
+        t17 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "flex flex-wrap gap-2",
+            children: t16
+        }, void 0, false, {
+            fileName: "[project]/src/components/ProjectsSection.tsx",
+            lineNumber: 235,
+            columnNumber: 11
+        }, this);
+        $[37] = t16;
+        $[38] = t17;
+    } else {
+        t17 = $[38];
+    }
+    let t18;
+    if ($[39] !== t14 || $[40] !== t15 || $[41] !== t17) {
+        t18 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "p-8 bg-white relative",
+            children: [
+                t14,
+                t15,
+                t17
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/ProjectsSection.tsx",
+            lineNumber: 243,
+            columnNumber: 11
+        }, this);
+        $[39] = t14;
+        $[40] = t15;
+        $[41] = t17;
+        $[42] = t18;
+    } else {
+        t18 = $[42];
+    }
+    let t19;
+    if ($[43] !== t11 || $[44] !== t18 || $[45] !== t5) {
+        t19 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            onMouseEnter: t3,
+            onMouseLeave: t4,
+            className: "break-inside-avoid group relative bg-white rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-4",
+            children: [
+                t5,
+                t11,
+                t18
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/ProjectsSection.tsx",
+            lineNumber: 253,
+            columnNumber: 11
+        }, this);
+        $[43] = t11;
+        $[44] = t18;
+        $[45] = t5;
+        $[46] = t19;
+    } else {
+        t19 = $[46];
+    }
+    return t19;
 }
+_s(ProjectCard, "92jvCy9DnWhtTqKvapMIyzkQScY=");
 _c1 = ProjectCard;
 function _ProjectCardProjectTagsMap(tag) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2427,7 +2541,7 @@ function _ProjectCardProjectTagsMap(tag) {
         children: tag
     }, tag, false, {
         fileName: "[project]/src/components/ProjectsSection.tsx",
-        lineNumber: 197,
+        lineNumber: 264,
         columnNumber: 10
     }, this);
 }

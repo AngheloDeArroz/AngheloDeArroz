@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const projects = [
@@ -11,7 +11,12 @@ const projects = [
         tags: ["Flutter", "Firebase", "Dart", "IoT"],
         color: "bg-blue-600",
         height: "h-96",
-        image: "/images/projects/rrj-flutter.png",
+        images: [
+            "/images/projects/rrjapp.png",
+            "/images/projects/rrjapp2.png",
+            "/images/projects/rrjapp3.png",
+            "/images/projects/rrjapp4.png"
+        ],
         link: "https://github.com/AngheloDeArroz/RRJ_Watch"
     },
     {
@@ -21,28 +26,43 @@ const projects = [
         tags: ["Next.js", "React Query", "Tailwind", "Firebase"],
         color: "bg-cyan-500",
         height: "h-72",
-        image: "/images/projects/rrj-web.png",
+        images: [
+            "/images/projects/rrjweb.png",
+            "/images/projects/rrjweb2.png",
+            "/images/projects/rrjweb3.png",
+            "/images/projects/rrjwatch4.png",
+            "/images/projects/rrjwatch5.png"
+        ],
         link: "https://github.com/AngheloDeArroz/RRJ_Watch_Web"
     },
     {
         id: 3,
-        title: "HappyHome Services",
-        description: "A professional platform connecting homeowners with service providers. Features AWS S3 image storage and WorkOS for enterprise-grade authentication.",
-        tags: ["Next.js", "MongoDB", "AWS S3", "WorkOS"],
-        color: "bg-emerald-500",
-        height: "h-80",
-        image: "/images/projects/happyhome.png",
-        link: "https://github.com/AngheloDeArroz/happyhome_services"
-    },
-    {
-        id: 4,
         title: "Cashflow Tracker",
         description: "A sleek, dark-themed desktop financial tool built with Python. Leverages CustomTkinter for the UI and MySQL for secure data persistence.",
         tags: ["Python", "CustomTkinter", "MySQL", "Matplotlib"],
         color: "bg-neutral-800",
         height: "h-96",
-        image: "/images/projects/cashflow.png",
+        images: [
+            "/images/projects/cashflow.png",
+            "/images/projects/cashflow2.png",
+            "/images/projects/cashflow3.png"
+        ],
         link: "https://github.com/AngheloDeArroz/CashFlowTracker"
+    },
+    {
+        id: 4,
+        title: "HappyHome Services",
+        description: "A professional platform connecting homeowners with service providers. Features AWS S3 image storage and WorkOS for enterprise-grade authentication.",
+        tags: ["Next.js", "MongoDB", "AWS S3", "WorkOS"],
+        color: "bg-emerald-500",
+        height: "h-80",
+        images: [
+            "/images/projects/homeservice.png",
+            "/images/projects/homeservice2.png",
+            "/images/projects/homeservice3.png",
+            "/images/projects/homeservice4.png"
+        ],
+        link: "https://github.com/AngheloDeArroz/happyhome_services"
     }
 ];
 
@@ -72,10 +92,32 @@ export default function ProjectsSection() {
 }
 
 function ProjectCard({ project }: { project: any }) {
-    return (
-        <div className="break-inside-avoid group relative bg-white rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-4">
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [isHovered, setIsHovered] = useState(false);
+
+    useEffect(() => {
+        let interval: NodeJS.Timeout;
+        
+        if (isHovered && project.images.length > 1) {
+            // Jump to second image immediately for visual feedback
+            setCurrentIndex(1); 
             
-            {/* Clickable Overlay for the whole image area */}
+            interval = setInterval(() => {
+                setCurrentIndex((prev) => (prev + 1) % project.images.length);
+            }, 1000); 
+        } else {
+            setCurrentIndex(0);
+        }
+        
+        return () => clearInterval(interval);
+    }, [isHovered, project.images.length]);
+
+    return (
+        <div 
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            className="break-inside-avoid group relative bg-white rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-4"
+        >
             <a 
                 href={project.link} 
                 target="_blank" 
@@ -83,41 +125,55 @@ function ProjectCard({ project }: { project: any }) {
                 className="absolute inset-0 z-20"
             />
 
-            {/* Image Container */}
             <div className={`relative w-full ${project.height} overflow-hidden ${project.color}`}>
+                {project.images.map((img: string, index: number) => (
+                    <Image 
+                        key={`${project.id}-${index}`}
+                        src={img}
+                        alt={`${project.title} screenshot ${index + 1}`}
+                        fill
+                        className={`object-cover object-top transition-opacity duration-500 ${
+                            index === currentIndex ? "opacity-100 scale-105" : "opacity-0"
+                        }`}
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        priority={project.id <= 2}
+                    />
+                ))}
+                
                 <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent" />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500 z-10" />
                 
-                <div className="absolute inset-0 flex items-center justify-center text-white/20 font-black text-2xl uppercase tracking-[0.2em] text-center px-6">
-                   {project.title}
-                </div>
+                {project.images.length > 1 && (
+                    <div className={`absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-1.5 transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
+                        {project.images.map((_: any, i: number) => (
+                            <div 
+                                key={i}
+                                className={`h-1 rounded-full transition-all duration-300 ${
+                                    i === currentIndex ? "w-6 bg-white" : "w-1.5 bg-white/40"
+                                }`}
+                            />
+                        ))}
+                    </div>
+                )}
             </div>
 
-            {/* Content Area */}
             <div className="p-8 bg-white relative">
                 <div className="flex justify-between items-start mb-4">
                     <h3 className="text-2xl font-bold text-gray-900 tracking-tight leading-tight">
                         {project.title}
                     </h3>
                     
-                    {/* Clickable Arrow Link */}
-                    <a 
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="relative z-30 w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-transform duration-500 shadow-xl flex-shrink-0 hover:bg-blue-600"
-                    >
+                    <div className="relative z-30 w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-transform duration-500 shadow-xl flex-shrink-0">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
                         </svg>
-                    </a>
+                    </div>
                 </div>
 
                 <p className="text-gray-500 text-base leading-relaxed mb-6">
                     {project.description}
                 </p>
 
-                {/* Tech Tags */}
                 <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag: string) => (
                         <span 
