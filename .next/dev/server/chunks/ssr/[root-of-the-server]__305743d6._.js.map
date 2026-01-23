@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Admin/Desktop/portfolio/src/app/page.tsx"],"sourcesContent":["import { ParallaxProvider } from 'react-scroll-parallax';\nimport './globals.css'; // Your global styles\n\nexport default function RootLayout({\n  children,\n}: {\n  children: React.ReactNode\n}) {\n  return (\n    <html lang=\"en\">\n      <body>\n        {/* Wrap your entire body/app content with the Provider */}\n        <ParallaxProvider>\n          {children}\n        </ParallaxProvider>\n      </body>\n    </html>\n  );\n}"],"names":[],"mappings":";;;;;AAAA;;;;AAGe,SAAS,WAAW,EACjC,QAAQ,EAGT;IACC,qBACE,8OAAC;QAAK,MAAK;kBACT,cAAA,8OAAC;sBAEC,cAAA,8OAAC,iMAAgB;0BACd;;;;;;;;;;;;;;;;AAKX"}}]
-}
