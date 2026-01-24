@@ -75,13 +75,13 @@ export default function CertificationsSection() {
 
                 <div className="relative max-w-6xl mx-auto">
                     {/* Navigation Arrows */}
-                    <button onClick={handlePrevious} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-8 md:-translate-x-16 lg:-translate-x-20 z-30 transition-opacity hover:opacity-70">
+                    <button onClick={handlePrevious} className="absolute left-0 top-1/2 -translate-y-1/2 translate-x-4 md:-translate-x-16 lg:-translate-x-20 z-30 transition-opacity hover:opacity-70">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-8 h-8 md:w-10 md:h-10 text-gray-800">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                         </svg>
                     </button>
 
-                    <button onClick={handleNext} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-8 md:translate-x-16 lg:translate-x-20 z-30 transition-opacity hover:opacity-70">
+                    <button onClick={handleNext} className="absolute right-0 top-1/2 -translate-y-1/2 -translate-x-4 md:translate-x-16 lg:translate-x-20 z-30 transition-opacity hover:opacity-70">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-8 h-8 md:w-10 md:h-10 text-gray-800">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                         </svg>

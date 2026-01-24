@@ -43,7 +43,6 @@ const projects = [
         color: "bg-neutral-800",
         height: "h-96",
         images: [
-            "/AngheloDeArroz/images/projects/cashflow.png",
             "/AngheloDeArroz/images/projects/cashflow2.png",
             "/AngheloDeArroz/images/projects/cashflow3.png"
         ],
