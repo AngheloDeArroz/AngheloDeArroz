@@ -52,6 +52,33 @@ const certificates = [
 
 export default function CertificationsSection() {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [touchStart, setTouchStart] = useState<number | null>(null);
+    const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+    // Minimum swipe distance (in px)
+    const minSwipeDistance = 50;
+
+    const onTouchStart = (e: React.TouchEvent) => {
+        setTouchEnd(null);
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const onTouchMove = (e: React.TouchEvent) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const onTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+        const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > minSwipeDistance;
+        const isRightSwipe = distance < -minSwipeDistance;
+
+        if (isLeftSwipe) {
+            handleNext();
+        } else if (isRightSwipe) {
+            handlePrevious();
+        }
+    };
 
     const handlePrevious = () => {
         setCurrentIndex((prev) => (prev === 0 ? certificates.length - 1 : prev - 1));
@@ -75,20 +102,25 @@ export default function CertificationsSection() {
 
                 <div className="relative max-w-6xl mx-auto">
                     {/* Navigation Arrows */}
-                    <button onClick={handlePrevious} className="absolute left-0 top-1/2 -translate-y-1/2 translate-x-4 md:-translate-x-16 lg:-translate-x-20 z-30 transition-opacity hover:opacity-70">
+                    <button onClick={handlePrevious} className="absolute left-0 top-1/2 -translate-y-1/2 translate-x-1 sm:translate-x-2 md:-translate-x-16 lg:-translate-x-20 z-30 transition-opacity hover:opacity-70">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-8 h-8 md:w-10 md:h-10 text-gray-800">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                         </svg>
                     </button>
 
-                    <button onClick={handleNext} className="absolute right-0 top-1/2 -translate-y-1/2 -translate-x-4 md:translate-x-16 lg:translate-x-20 z-30 transition-opacity hover:opacity-70">
+                    <button onClick={handleNext} className="absolute right-0 top-1/2 -translate-y-1/2 -translate-x-1 sm:-translate-x-2 md:translate-x-16 lg:translate-x-20 z-30 transition-opacity hover:opacity-70">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-8 h-8 md:w-10 md:h-10 text-gray-800">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                         </svg>
                     </button>
 
                     {/* Main Card */}
-                    <div className="bg-gray-50 rounded-3xl overflow-hidden shadow-2xl border border-gray-100 flex flex-col lg:flex-row min-h-[500px]">
+                    <div
+                        onTouchStart={onTouchStart}
+                        onTouchMove={onTouchMove}
+                        onTouchEnd={onTouchEnd}
+                        className="bg-gray-50 rounded-3xl overflow-hidden shadow-2xl border border-gray-100 flex flex-col lg:flex-row min-h-[500px]"
+                    >
 
                         {/* Image Side */}
                         <div className="w-full lg:w-3/5 bg-neutral-100 flex items-center justify-center p-6 md:p-10">
