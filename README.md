@@ -69,5 +69,5 @@ This GitHub serves as a **learning journal** where I document my progress throug
 
 ## 📫 Let’s Connect
 
-* 🌐 Portfolio: [https://anghelodearroz.github.io/AngheloDeArroz/](https://anghelodearroz.github.io/AngheloDeArroz/)
-* 💼 LinkedIn: [https://www.linkedin.com/in/anghelo-de-arroz](www.linkedin.com/in/anghelodearroz)
+* 🌐 Portfolio: [https://anghelodearroz.github.io/AngheloDeArroz/] (https://anghelodearroz.github.io/AngheloDeArroz/)
+* 💼 LinkedIn: [https://www.linkedin.com/in/anghelo-de-arroz] (www.linkedin.com/in/anghelodearroz)
