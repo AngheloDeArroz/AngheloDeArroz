@@ -4,8 +4,10 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
   output: "export",
-  basePath: "/AngheloDeArroz",
-  assetPrefix: "/AngheloDeArroz/",
+  
+  // basePath: "/AngheloDeArroz",
+  // assetPrefix: "/AngheloDeArroz/",
+  
   trailingSlash: true,
   images: {
     unoptimized: true,

@@ -203,7 +203,7 @@ const HeroSection = ({
         </div>
       </nav>
       {/* Background Image/Photo */}
-      <img src="/AngheloDeArroz/images/photo.png" alt="Background" className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none z-30 h-[110vh] md:h-[114vh] w-auto object-cover" />
+      <img src="/images/photo.png" alt="Background" className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none z-30 h-[110vh] md:h-[114vh] w-auto object-cover" />
 
       {/* Right/Bottom Text Block */}
       <div className="absolute z-30 flex flex-col items-start gap-2 select-none pointer-events-none left-6 bottom-44 md:left-auto md:bottom-auto md:right-32 md:top-[30%]">

@@ -56,7 +56,7 @@ export default function ContactSection() {
                 <div className="order-1 md:order-2 flex justify-center md:justify-end">
                     <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-gray-200 shadow-2xl transition-transform duration-500 hover:scale-105">
                         <Image
-                            src="/AngheloDeArroz/images/linkedinphoto.png"
+                            src="/images/linkedinphoto.png"
                             alt="Profile"
                             fill
                             className="object-cover"
