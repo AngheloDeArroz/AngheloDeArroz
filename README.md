@@ -48,12 +48,6 @@ Full-stack developer currently deep in the AI space — RAG pipelines, autonomou
 
 <div align="center">
 
-<img height="160em" src="https://github-readme-stats.vercel.app/api?username=anghelodearroz&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&title_color=111111&icon_color=111111&text_color=555555&bg_color=ffffff" />
-&nbsp;
-<img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=anghelodearroz&layout=compact&hide_border=true&title_color=111111&text_color=555555&bg_color=ffffff" />
-
-<br/><br/>
-
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=anghelodearroz&bg_color=ffffff&color=111111&line=111111&point=555555&area=true&hide_border=true" />
 
 </div>
