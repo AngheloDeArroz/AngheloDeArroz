@@ -1,73 +1,67 @@
+﻿<div align="center">
 
-# 👋 Hi, I'm Anghelo
+<img src="./public/images/banner/banner.png" alt="Banner" width="100%" />
 
-Welcome to my GitHub profile! This README is a quick snapshot of who I am, what I’m learning, and what I like building.
+</div>
 
----
+<div align="center">
+<br/>
 
-## 🌱 About Me
+I love building **open source projects**, especially AI-powered tools that contribute to the programming community and push the ecosystem forward.
 
-* 🎓 IT student majoring in **Network Technology**
-* 💻 Interested in **software engineering**, **web development**, and **mobile app development**
-* 🧠 Focused on building a strong foundation in **programming**, **software development principles**, and **cloud technologies**
-* 🚀 Always curious, always learning
+<br/>
 
----
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anghelodearroz)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:anghelodechavezdearroz@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-111111?style=flat-square&logo=firefox&logoColor=white)](https://anghelodearroz.me)
 
-## 🛠️ Tech Stack & Skills
-
-**Languages & Frameworks**
-
-* JavaScript / TypeScript
-* Dart (Flutter)
-* Python
-* HTML, CSS
-* React, Next.js
-
-**Tools & Platforms**
-
-* Git & GitHub
-* Firebase (Firestore, Auth, Cloud Functions)
-* Cloud fundamentals
-
-**Current Focus**
-
-* Strengthening software engineering fundamentals
-* Writing clean, readable, and maintainable code
-* Building practical projects that reflect continuous learning
+</div>
 
 ---
 
-## 📌 Featured Projects
+### 🙋 About me
 
-### 🐠 RRJ Aquatique
-
-An IoT-powered aquarium monitoring and automation system.
-
-* Real-time water quality monitoring
-* Automated feeding and pH balancing
-* Web dashboard and Flutter mobile app
-* Cloud-powered backend
-
-## 📚 Projects & Learning Journey
-
-This GitHub serves as a **learning journal** where I document my progress through school projects and personal builds.
-
-* School-related projects and requirements
-* Personal projects created to practice and explore concepts
-* Iterative improvements as my skills grow over time
+Full-stack developer currently deep in the AI space — RAG pipelines, autonomous agents, you name it. I build open source tools to support the programming community and make development more accessible and efficient.
 
 ---
 
-## 📈 What You’ll Find Here
+### 🧰 Languages & Tools
 
-* Academic and personal projects
-* Code written while learning and refining fundamentals
-* Practical applications of concepts from coursework and self-study
+**Languages**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white)
+
+**Infrastructure**
+
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
+![NoSQL](https://img.shields.io/badge/NoSQL-4DB33D?style=flat-square&logo=mongodb&logoColor=white)
 
 ---
 
-## 📫 Let’s Connect
+### 📊 GitHub Stats
 
-* 🌐 Portfolio: [https://anghelodearroz.github.io/AngheloDeArroz/] (https://anghelodearroz.github.io/AngheloDeArroz/)
-* 💼 LinkedIn: www.linkedin.com/in/anghelodearroz
+<div align="center">
+
+<img height="160em" src="https://github-readme-stats.vercel.app/api?username=anghelodearroz&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&title_color=111111&icon_color=111111&text_color=555555&bg_color=ffffff" />
+&nbsp;
+<img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=anghelodearroz&layout=compact&hide_border=true&title_color=111111&text_color=555555&bg_color=ffffff" />
+
+<br/><br/>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=anghelodearroz&bg_color=ffffff&color=111111&line=111111&point=555555&area=true&hide_border=true" />
+
+</div>
+
+---
+
+<div align="center">
+
+![Profile Views](https://komarev.com/ghpvc/?username=anghelodearroz&color=111111&style=flat-square&label=visitors)
+
+</div>
