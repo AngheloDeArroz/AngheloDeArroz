@@ -44,16 +44,6 @@ Full-stack developer currently deep in the AI space — RAG pipelines, autonomou
 
 ---
 
-### 📊 GitHub Stats
-
-<div align="center">
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=anghelodearroz&bg_color=ffffff&color=111111&line=111111&point=555555&area=true&hide_border=true" />
-
-</div>
-
----
-
 <div align="center">
 
 ![Profile Views](https://komarev.com/ghpvc/?username=anghelodearroz&color=111111&style=flat-square&label=visitors)
