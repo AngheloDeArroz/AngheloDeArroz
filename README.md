@@ -7,7 +7,7 @@
 <div align="center">
 <br/>
 
-I love building **open source projects**, especially AI-powered tools that contribute to the programming community and push the ecosystem forward.
+I enjoy building open source projects, especially AI-powered tools. I’m still learning along the way, using each project as a chance to experiment, improve, and hopefully create something useful for the dev community.
 
 <br/>
 
