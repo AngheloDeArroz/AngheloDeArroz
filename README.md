@@ -19,9 +19,9 @@ I enjoy building open source projects, especially AI-powered tools. I’m still 
 
 ---
 
-### 🙋 About me
+### About me
 
-Full-stack developer currently deep in the AI space — RAG pipelines, autonomous agents, you name it. I build open source tools to support the programming community and make development more accessible and efficient.
+IT major in Network Technology, working across full-stack development and AI, including RAG pipelines and autonomous agents. I build open-source tools to learn and contribute to making development more accessible and practical.
 
 ---
 
