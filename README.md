@@ -25,7 +25,7 @@ IT major in Network Technology, working across full-stack development and AI, in
 
 ---
 
-### 🧰 Languages & Tools
+### Languages & Tools
 
 **Languages**
 
