@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Serif+Display:ital@0;1&display=swap');
+@import "tailwindcss";
+
+:root {
+  --color-bg: #0D0D0D;
+  --color-surface: #141414;
+  --color-border: #222222;
+  --color-fg: #E8E4DC;
+  --color-fg-muted: #8A8A8A;
+  --color-accent: #C8F542;
+  --color-accent-dim: #8FAF2A;
+}
+
+.light {
+  --color-bg: #F5F3EF;
+  --color-surface: #EDE9E1;
+  --color-border: #E0DDD5;
+  --color-fg: #0D0D0D;
+  --color-fg-muted: #6B6B6B;
+  --color-accent: #2A6BFF;
+  --color-accent-dim: #1D4ED8;
+}
+
+@theme {
+  --font-serif: "DM Serif Display", serif;
+  --font-mono: "DM Mono", monospace;
+
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-border: var(--color-border);
+  --color-fg: var(--color-fg);
+  --color-fg-muted: var(--color-fg-muted);
+  --color-accent: var(--color-accent);
+  --color-accent-dim: var(--color-accent-dim);
+
+  --spacing-section: 3rem;
+  --spacing-element: 1.5rem;
+}
+
+* {
+  transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, color 0.5s ease-in-out, fill 0.5s ease-in-out, stroke 0.5s ease-in-out;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-fg font-mono antialiased selection:bg-accent selection:text-bg;
+    line-height: 1.7;
+    font-size: 0.9375rem;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor {
+  animation: blink 1.1s step-end infinite;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.markdown-body h1 { @apply text-4xl mb-8; }
+.markdown-body h2 { @apply text-3xl mt-12 mb-6; }
+.markdown-body p { @apply mb-4; }
+
