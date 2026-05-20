@@ -4,7 +4,7 @@ export const PROJECTS: Project[] = [
   {
     id: "1",
     title: "Containless",
-    image: "https://images.unsplash.com/photo-1605745341112-85968b193ef5?auto=format&fit=crop&q=80&w=800",
+    image: "/images/containless.png",
     tags: ["Docker", "Go", "Infrastructure"],
     description: "A lightweight container management platform designed for rapid deployment and orchestration of microservices.",
     fullDescription: "Containless is a specialized container management tool written in Go, focusing on minimal resource overhead. It provides a CLI and a web dashboard to monitor container health, resource usage, and logs in real-time. Designed for developers who need speed without the complexity of K8s for smaller staging environments.",
@@ -14,7 +14,7 @@ export const PROJECTS: Project[] = [
   {
     id: "2",
     title: "Openmerlin",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+    image: "/images/openmerlin.png",
     tags: ["Open Source", "React", "Community"],
     description: "A collaborative open-source platform for sharing and discovery of innovative software architecture patterns.",
     fullDescription: "Openmerlin bridge the gap between architectural theory and practice. It allows architects to upload visual patterns and link them to reference implementations. It features a custom canvas-based diagramming tool built on top of Konva.js, integrated with a React frontend and Node.js backend.",

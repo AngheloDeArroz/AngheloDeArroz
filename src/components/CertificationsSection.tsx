@@ -31,10 +31,13 @@ const CertificationRow = ({ cert }: CertificationRowProps) => {
   };
 
   return (
-    <motion.div
+    <motion.a
+      href={cert.link}
+      target="_blank"
+      rel="noopener noreferrer"
       variants={itemVariants}
       whileHover={{ x: 10 }}
-      className="group flex flex-col md:flex-row gap-4 md:gap-8 py-8 border-b border-border/50 last:border-b-0 overflow-hidden transition-colors duration-500"
+      className="group flex flex-col md:flex-row gap-4 md:gap-8 py-8 border-b border-border/50 last:border-b-0 overflow-hidden transition-colors duration-500 cursor-pointer block text-left"
     >
       <div className="w-[8ch] flex-shrink-0 text-[13px] font-mono text-fg-muted uppercase tabular-nums transition-colors duration-300 group-hover:text-accent">
         {cert.issueDate || cert.year}
@@ -77,29 +80,20 @@ const CertificationRow = ({ cert }: CertificationRowProps) => {
             </div>
           )}
         </div>
-
+ 
         {cert.link && (
-          <motion.a
-            href={cert.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group/link flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.2em] text-accent hover:text-accent transition-colors w-fit relative"
-            whileHover={{ x: 5 }}
+          <div
+            className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.2em] text-accent transition-colors w-fit relative"
           >
             <span className="relative">
               View Badge
-              <motion.div 
-                className="absolute -bottom-1 left-0 h-[1px] bg-accent"
-                initial={{ width: 0 }}
-                whileHover={{ width: "100%" }}
-                transition={{ duration: 0.3 }}
-              />
+              <span className="absolute -bottom-1 left-0 h-[1px] bg-accent w-0 group-hover:w-full transition-all duration-300" />
             </span>
-            <ArrowRight size={12} className="group-hover/link:translate-x-1 transition-transform" />
-          </motion.a>
+            <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform duration-300" />
+          </div>
         )}
       </div>
-    </motion.div>
+    </motion.a>
   );
 };
 

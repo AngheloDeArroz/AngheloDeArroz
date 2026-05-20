@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import { useState, useEffect, MouseEvent, ReactNode } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const NAV_ITEMS = [
   { id: "about", label: "About" },
@@ -117,6 +118,11 @@ export const Navigation = () => {
     }
 
     const handleScrollSpy = () => {
+      if (window.scrollY < 50) {
+        setActiveTab("hero");
+        return;
+      }
+
       const sections = ["hero", ...NAV_ITEMS.map((item) => item.id)];
       const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100;
 
@@ -265,33 +271,89 @@ export const Navigation = () => {
             animate={{ x: 0 }}
             exit={{ x: "calc(100% + 100px)" }}
             transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-            className="fixed inset-0 z-[9998] bg-bg w-full flex flex-col items-center justify-center gap-10 shadow-2xl"
+            className="fixed inset-0 z-[9998] bg-bg w-full flex flex-col justify-between p-12 md:p-16 shadow-2xl"
           >
             <Curve />
-            {NAV_ITEMS.map((item, index) => (
-              <motion.button
-                key={item.id}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ 
-                  delay: 0.1 + (0.05 * index),
-                  duration: 0.5,
-                  ease: "easeOut"
-                }}
-                onClick={() => handleClick(item.id)}
-                className="text-2xl tracking-[0.2em] uppercase font-mono transition-colors focus:outline-none"
-              >
-                <span className={activeTab === item.id ? "text-accent" : "text-fg"}>
-                  {item.label}
+            
+            {/* Top Label */}
+            <div className="flex justify-between items-center w-full">
+              <span className="text-[10px] font-mono tracking-[0.3em] uppercase text-fg-muted/40">
+                — Index
+              </span>
+              <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-fg-muted/40">
+                v2.0.4
+              </span>
+            </div>
+
+            {/* Main Nav Items */}
+            <div className="flex flex-col gap-6 my-auto items-center">
+              {NAV_ITEMS.map((item, index) => (
+                <motion.button
+                  key={item.id}
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ 
+                    delay: 0.1 + (0.05 * index),
+                    duration: 0.5,
+                    ease: "easeOut"
+                  }}
+                  onClick={() => handleClick(item.id)}
+                  className="text-3xl sm:text-4xl tracking-[0.2em] uppercase font-mono transition-colors focus:outline-none hover:text-accent"
+                >
+                  <span className={activeTab === item.id ? "text-accent" : "text-fg"}>
+                    {item.label}
+                  </span>
+                  {activeTab === item.id && (
+                    <motion.div
+                      layoutId="mobile-nav-dot"
+                      className="h-1.5 w-1.5 rounded-full bg-accent mx-auto mt-2"
+                    />
+                  )}
+                </motion.button>
+              ))}
+            </div>
+
+            {/* Bottom Footer Info */}
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 w-full pt-8 border-t border-border/20">
+              <div className="space-y-2">
+                <span className="text-[9px] font-mono tracking-[0.2em] uppercase text-fg-muted/40 block">
+                  — Socials
                 </span>
-                {activeTab === item.id && (
-                  <motion.div
-                    layoutId="mobile-nav-dot"
-                    className="h-1 w-1 rounded-full bg-accent mx-auto mt-2"
-                  />
-                )}
-              </motion.button>
-            ))}
+                <div className="flex gap-6 text-lg">
+                  <a
+                    href="https://github.com/AngheloDeArroz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-fg-muted hover:text-accent transition-colors"
+                  >
+                    <Github className="w-5 h-5" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/anghelodearroz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-fg-muted hover:text-accent transition-colors"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                  </a>
+                  <a
+                    href="mailto:angelodearroz@gmail.com"
+                    className="text-fg-muted hover:text-accent transition-colors"
+                  >
+                    <Mail className="w-5 h-5" />
+                  </a>
+                </div>
+              </div>
+
+              <div className="text-left sm:text-right space-y-1">
+                <span className="text-[9px] font-mono tracking-[0.2em] uppercase text-fg-muted/40 block">
+                  — Location
+                </span>
+                <span className="text-[11px] font-mono uppercase tracking-wider text-fg-muted block">
+                  Batangas City, PH
+                </span>
+              </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

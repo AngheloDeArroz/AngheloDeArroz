@@ -29,7 +29,7 @@ export const ProjectDetail = () => {
       exit={{ opacity: 0 }}
       className="min-h-screen bg-bg"
     >
-      <div className="mx-auto max-w-[720px] px-[clamp(1.5rem,5vw,4rem)] pt-[10vh] pb-32">
+      <div className="mx-auto max-w-[720px] px-[clamp(1.5rem,5vw,4rem)] pt-24 lg:pt-12 pb-32">
         <motion.button
           initial={{ opacity: 0, x: -10 }}
           animate={{ opacity: 1, x: 0 }}
