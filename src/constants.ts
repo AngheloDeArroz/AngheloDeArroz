@@ -6,10 +6,11 @@ export const PROJECTS: Project[] = [
     title: "Containless",
     image: "/images/containless.webp",
     tags: ["Docker", "Go", "Infrastructure"],
-    description: "A lightweight container management platform designed for rapid deployment and orchestration of microservices.",
-    fullDescription: "Containless is a specialized container management tool written in Go, focusing on minimal resource overhead. It provides a CLI and a web dashboard to monitor container health, resource usage, and logs in real-time. Designed for developers who need speed without the complexity of K8s for smaller staging environments.",
-    githubLink: "https://github.com/example/containless",
-    link: "#"
+    description: "Instant project runtimes. No containers, no global installs, no version conflicts.",
+    fullDescription: "Containless is an npm package and VS Code extension that installs the exact runtime your project needs directly inside your project folder, keeping everything isolated without containers, version managers, or global installs.",
+    githubLink: "https://github.com/AngheloDeArroz/Containless",
+    link: "https://www.npmjs.com/package/containless?activeTab=readme",
+    vscodeLink: "https://marketplace.visualstudio.com/items?itemName=containless.containless"
   },
   {
     id: "2",
@@ -24,7 +25,7 @@ export const PROJECTS: Project[] = [
   {
     id: "3",
     title: "DevGuideAI",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
+    image: "/images/devguideai.webp",
     tags: ["LLM", "Next.js", "AI"],
     description: "An AI-powered mentor that provides personalized learning paths and automated code reviews for software engineers.",
     fullDescription: "DevGuideAI leverages Gemini 1.5 Pro to analyze GitHub repositories and suggest improvements based on standard design patterns. It generates a roadmap for junior developers to reach senior-level competency in specific tech stacks by identifying gaps in their current coding style.",
@@ -34,7 +35,7 @@ export const PROJECTS: Project[] = [
   {
     id: "4",
     title: "RRJ Watch",
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=800",
+    image: "/images/rrjwatch.webp",
     tags: ["E-commerce", "Performance", "UI/UX"],
     description: "A high-performance luxury timepiece marketplace featuring seamless transitions and immersive product storytelling.",
     fullDescription: "RRJ Watch is an experimental e-commerce site where the focus is on motion design. Using Framer Motion and Three.js, it creates a tactile shopping experience. Every watch component can be inspected in 3D, and the purchase flow is integrated with a custom Stripe microservice.",
@@ -44,7 +45,7 @@ export const PROJECTS: Project[] = [
   {
     id: "5",
     title: "Chat-pdf",
-    image: "https://images.unsplash.com/photo-1568667256549-094345857637?auto=format&fit=crop&q=80&w=800",
+    image: "/images/chatpdf.webp",
     tags: ["Python", "OpenAI", "NLP"],
     description: "An intelligent document interaction tool that allows users to query and summarize large PDF documents using natural language.",
     fullDescription: "Chat-pdf uses RAG (Retrieval-Augmented Generation) to process thousands of pages across multiple PDF files. It uses Pinecone for vector storage and OpenAI's GPT-4 for high-fidelity responses. It's built to handle complex legal and technical documentation where context is everything.",

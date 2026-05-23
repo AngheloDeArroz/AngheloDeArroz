@@ -280,9 +280,6 @@ export const Navigation = () => {
               <span className="text-[10px] font-mono tracking-[0.3em] uppercase text-fg-muted/40">
                 — Index
               </span>
-              <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-fg-muted/40">
-                v2.0.4
-              </span>
             </div>
 
             {/* Main Nav Items */}

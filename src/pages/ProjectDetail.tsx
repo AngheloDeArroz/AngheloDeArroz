@@ -96,7 +96,11 @@ export const ProjectDetail = () => {
                 <div className="pt-8 border-t border-border/50">
                   <h3 className="text-xs font-mono uppercase tracking-[0.2em] text-fg mb-4">Technical Challenges</h3>
                   <p className="text-fg-muted leading-relaxed">
-                    The core challenge was to simplify the interface while dealing with high-frequency telemetry data. By implementing a custom state management layer, we achieved sub-50ms latency for real-time visualization updates. This project pushed the boundaries of what is possible with minimalist UI frameworks in high-performance environments.
+                    Every runtime publishes binaries differently. Node.js ships clean tarballs, Python requires python-build-standalone for portable static builds, Java resolves through Adoptium's versioning scheme, and Ruby splits between ruby-builder on Unix and RubyInstaller2 on Windows.
+
+                    Version detection has real edge cases. .nvmrc is trivial but package.json engines fields are semver ranges that need resolving, pyproject.toml uses PEP 518 syntax, and build.gradle comes in both Groovy and Kotlin DSL variants.
+
+                    The VS Code extension writes only to workspace settings, never user settings, and tracks exactly which keys it owns so the reset command removes only what it wrote. On a fresh clone it checks for containless.json first — if the config exists but runtimes are missing it prompts, if neither exists it stays quiet.
                   </p>
                 </div>
               </div>
@@ -112,9 +116,9 @@ export const ProjectDetail = () => {
             <div className="space-y-4">
               <h2 className="text-[10px] font-mono uppercase tracking-[0.3em] text-accent">Platform</h2>
               <ul className="text-sm space-y-2 text-fg-muted font-mono uppercase tracking-wider">
-                <li>Web App</li>
-                <li>Desktop</li>
-                <li>iOS/Android</li>
+                <li>npm</li>
+                <li>VSCode Marketplace</li>
+                <li>Github</li>
               </ul>
             </div>
 
@@ -128,7 +132,18 @@ export const ProjectDetail = () => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-fg hover:text-accent transition-colors font-mono text-sm uppercase tracking-widest"
                   >
-                    <span>Live Site</span>
+                    <span>{project.link.includes("npmjs.com") ? "NPM Package" : "Live Site"}</span>
+                    <ExternalLink size={14} />
+                  </a>
+                )}
+                {project.vscodeLink && (
+                  <a
+                    href={project.vscodeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-fg hover:text-accent transition-colors font-mono text-sm uppercase tracking-widest"
+                  >
+                    <span>VS Code Extension</span>
                     <ExternalLink size={14} />
                   </a>
                 )}
@@ -149,7 +164,7 @@ export const ProjectDetail = () => {
         </div>
       </div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.02 }}
         className="fixed inset-0 pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] brightness-100 contrast-150"

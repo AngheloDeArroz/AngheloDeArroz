@@ -70,12 +70,6 @@ export const Intro = ({ onComplete }: { onComplete: () => void; [key: string]: a
             <span className="tabular-nums">
               {Math.floor(Math.min(percent, 100))}%
             </span>
-            <motion.span
-              animate={{ opacity: [0.2, 0.5, 0.2] }}
-              transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-            >
-              v2.0.4
-            </motion.span>
           </div>
         </div>
       </div>

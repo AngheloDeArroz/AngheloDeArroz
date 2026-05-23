@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { Section } from "./Section";
-import { MapPin, BadgeCheck, GraduationCap, Terminal, X, ChevronRight, RefreshCw, Share2, Check } from "lucide-react";
+import { MapPin, BadgeCheck, GraduationCap, Terminal, X, ChevronRight, RefreshCw, Share2, Check, Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useTheme } from "../contexts/ThemeContext";
 
@@ -174,12 +174,19 @@ export const Hero = () => {
       >
         <motion.div
           variants={itemVariants}
-          className="relative w-20 sm:w-24 md:w-32 lg:w-40 aspect-square shrink-0 group self-center md:self-auto"
+          className="relative w-20 sm:w-24 md:w-32 lg:w-40 aspect-square shrink-0 group self-center md:self-auto cursor-pointer select-none"
           onClick={toggleTheme}
+          title="Click to switch theme"
           style={{ perspective: 1000 }}
         >
+          {/* Accent-colored corner brackets highlighting interactability */}
+          <div className="absolute -top-1 -left-1 w-2.5 h-2.5 border-t-2 border-l-2 border-fg-muted/30 group-hover:border-accent transition-colors duration-300 pointer-events-none" />
+          <div className="absolute -top-1 -right-1 w-2.5 h-2.5 border-t-2 border-r-2 border-fg-muted/30 group-hover:border-accent transition-colors duration-300 pointer-events-none" />
+          <div className="absolute -bottom-1 -left-1 w-2.5 h-2.5 border-b-2 border-l-2 border-fg-muted/30 group-hover:border-accent transition-colors duration-300 pointer-events-none" />
+          <div className="absolute -bottom-1 -right-1 w-2.5 h-2.5 border-b-2 border-r-2 border-fg-muted/30 group-hover:border-accent transition-colors duration-300 pointer-events-none" />
+
           <motion.div
-            className="w-full h-full relative cursor-pointer"
+            className="w-full h-full relative"
             animate={{ rotateY: theme === "light" ? 180 : 0 }}
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.96 }}
@@ -188,7 +195,7 @@ export const Hero = () => {
           >
             {/* Front (Dark) */}
             <div
-              className="absolute inset-0 w-full h-full border border-border overflow-hidden"
+              className="absolute inset-0 w-full h-full border border-border group-hover:border-accent/80 transition-colors duration-500 overflow-hidden"
               style={{ backfaceVisibility: "hidden" }}
             >
               <motion.img
@@ -204,7 +211,7 @@ export const Hero = () => {
 
             {/* Back (Light) */}
             <div
-              className="absolute inset-0 w-full h-full border border-border overflow-hidden"
+              className="absolute inset-0 w-full h-full border border-border group-hover:border-accent/80 transition-colors duration-500 overflow-hidden"
               style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
             >
               <img
@@ -218,14 +225,6 @@ export const Hero = () => {
               />
             </div>
           </motion.div>
-
-          {/* Permanent Floating Action Indicator (FAB) */}
-          <div
-            className="absolute -bottom-1.5 -right-1.5 bg-fg text-bg border border-border p-1.5 rounded-full shadow-md z-20 flex items-center justify-center cursor-pointer transition-transform duration-300 group-hover:scale-110 active:scale-95"
-            title="Click to flip theme"
-          >
-            <RefreshCw className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-bg animate-[spin_10s_linear_infinite]" />
-          </div>
         </motion.div>
 
         {/* Right Container: Details Column (Vertically distributed to match the photo's height exactly like a banner on all screen sizes) */}

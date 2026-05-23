@@ -8,6 +8,7 @@ export interface Project {
   fullDescription: string;
   githubLink?: string;
   link?: string;
+  vscodeLink?: string;
 }
 
 export interface Certification {
