@@ -9,6 +9,8 @@ export interface Project {
   githubLink?: string;
   link?: string;
   vscodeLink?: string;
+  platforms?: string[];
+  technicalChallenge?: string;
 }
 
 export interface Certification {

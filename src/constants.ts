@@ -5,12 +5,14 @@ export const PROJECTS: Project[] = [
     id: "1",
     title: "Containless",
     image: "/images/containless.webp",
-    tags: ["Docker", "Go", "Infrastructure"],
+    tags: ["NPM Package", "VSCode Extension", "Runtime Isolation"],
     description: "Instant project runtimes. No containers, no global installs, no version conflicts.",
     fullDescription: "Containless is an npm package and VS Code extension that installs the exact runtime your project needs directly inside your project folder, keeping everything isolated without containers, version managers, or global installs.",
     githubLink: "https://github.com/AngheloDeArroz/Containless",
     link: "https://www.npmjs.com/package/containless?activeTab=readme",
-    vscodeLink: "https://marketplace.visualstudio.com/items?itemName=containless.containless"
+    vscodeLink: "https://marketplace.visualstudio.com/items?itemName=containless.containless",
+    platforms: ["NPM", "VSCode Marketplace", "GitHub"],
+    technicalChallenge: "Every runtime publishes binaries differently. Node.js ships clean tarballs, Python requires python-build-standalone for portable static builds, Java resolves through Adoptium's versioning scheme, and Ruby splits between ruby-builder on Unix and RubyInstaller2 on Windows.\n\nVersion detection has real edge cases. .nvmrc is trivial but package.json engines fields are semver ranges that need resolving, pyproject.toml uses PEP 518 syntax, and build.gradle comes in both Groovy and Kotlin DSL variants.\n\nThe VS Code extension writes only to workspace settings, never user settings, and tracks exactly which keys it owns so the reset command removes only what it wrote. On a fresh clone it checks for containless.json first — if the config exists but runtimes are missing it prompts, if neither exists it stays quiet."
   },
   {
     id: "2",
@@ -20,7 +22,7 @@ export const PROJECTS: Project[] = [
     description: "A collaborative open-source platform for sharing and discovery of innovative software architecture patterns.",
     fullDescription: "Openmerlin bridge the gap between architectural theory and practice. It allows architects to upload visual patterns and link them to reference implementations. It features a custom canvas-based diagramming tool built on top of Konva.js, integrated with a React frontend and Node.js backend.",
     githubLink: "https://github.com/example/openmerlin",
-    link: "#"
+    link: "https://www.npmjs.com/package/openmerlin"
   },
   {
     id: "3",
@@ -35,12 +37,15 @@ export const PROJECTS: Project[] = [
   {
     id: "4",
     title: "RRJ Watch",
+    year: "2025",
     image: "/images/rrjwatch.webp",
-    tags: ["E-commerce", "Performance", "UI/UX"],
-    description: "A high-performance luxury timepiece marketplace featuring seamless transitions and immersive product storytelling.",
-    fullDescription: "RRJ Watch is an experimental e-commerce site where the focus is on motion design. Using Framer Motion and Three.js, it creates a tactile shopping experience. Every watch component can be inspected in 3D, and the purchase flow is integrated with a custom Stripe microservice.",
+    tags: ["IoT", "Flutter", "Firebase"],
+    description: "An IoT-powered aquarium monitoring and automation platform for real-time water quality tracking and smart fish care.",
+    fullDescription: "RRJ Watch is an IoT-powered aquarium monitoring and automation platform designed to maintain stable water quality and automate critical fish care tasks. The system combines embedded sensors, cloud synchronization, and real-time dashboards through both web and Flutter mobile applications to help aquarium owners monitor and manage their tanks remotely.",
     githubLink: "https://github.com/example/rrj-watch",
-    link: "#"
+    link: "https://rrjwatch.shop",
+    platforms: ["Web App", "Mobile App", "IoT"],
+    technicalChallenge: "The project required integrating multiple water quality sensors with different calibration behaviors, noisy analog readings, and varying sampling intervals while keeping real-time synchronization consistent across the IoT device, Firestore, the Flutter mobile app, and the web dashboard. Historical trend visualization introduced challenges in graph scaling, scrolling, and rendering multiple parameters simultaneously without affecting readability. Automation features such as scheduled feeding, pH balancing, and abnormal condition alerts also required fail-safe logic to prevent duplicate executions and false notifications, while Firebase Cloud Functions and Gemini AI were integrated to process real-time data, generate push notifications, and provide AI-driven insights based on historical water quality records."
   },
   {
     id: "5",

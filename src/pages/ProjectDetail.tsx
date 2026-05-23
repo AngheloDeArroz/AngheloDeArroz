@@ -58,7 +58,7 @@ export const ProjectDetail = () => {
           >
             <div className="flex items-center gap-2">
               <Calendar size={14} className="text-accent" />
-              <span>{project.year || "2024"}</span>
+              <span>{project.year || "2026"}</span>
             </div>
             <div className="flex items-center gap-2">
               <Tag size={14} className="text-accent" />
@@ -93,16 +93,14 @@ export const ProjectDetail = () => {
                 <p className="text-xl text-fg-muted leading-relaxed font-serif italic italic-none">
                   {project.fullDescription}
                 </p>
-                <div className="pt-8 border-t border-border/50">
-                  <h3 className="text-xs font-mono uppercase tracking-[0.2em] text-fg mb-4">Technical Challenges</h3>
-                  <p className="text-fg-muted leading-relaxed">
-                    Every runtime publishes binaries differently. Node.js ships clean tarballs, Python requires python-build-standalone for portable static builds, Java resolves through Adoptium's versioning scheme, and Ruby splits between ruby-builder on Unix and RubyInstaller2 on Windows.
-
-                    Version detection has real edge cases. .nvmrc is trivial but package.json engines fields are semver ranges that need resolving, pyproject.toml uses PEP 518 syntax, and build.gradle comes in both Groovy and Kotlin DSL variants.
-
-                    The VS Code extension writes only to workspace settings, never user settings, and tracks exactly which keys it owns so the reset command removes only what it wrote. On a fresh clone it checks for containless.json first — if the config exists but runtimes are missing it prompts, if neither exists it stays quiet.
-                  </p>
-                </div>
+                {project.technicalChallenge && (
+                  <div className="pt-8 border-t border-border/50">
+                    <h3 className="text-xs font-mono uppercase tracking-[0.2em] text-fg mb-4">Technical Challenges</h3>
+                    <p className="text-fg-muted leading-relaxed whitespace-pre-line">
+                      {project.technicalChallenge}
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           </motion.div>
@@ -113,14 +111,16 @@ export const ProjectDetail = () => {
             transition={{ delay: 0.5 }}
             className="space-y-12"
           >
-            <div className="space-y-4">
-              <h2 className="text-[10px] font-mono uppercase tracking-[0.3em] text-accent">Platform</h2>
-              <ul className="text-sm space-y-2 text-fg-muted font-mono uppercase tracking-wider">
-                <li>npm</li>
-                <li>VSCode Marketplace</li>
-                <li>Github</li>
-              </ul>
-            </div>
+            {project.platforms && project.platforms.length > 0 && (
+              <div className="space-y-4">
+                <h2 className="text-[10px] font-mono uppercase tracking-[0.3em] text-accent">Platform</h2>
+                <ul className="text-sm space-y-2 text-fg-muted font-mono uppercase tracking-wider">
+                  {project.platforms.map((p) => (
+                    <li key={p}>{p}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             <div className="space-y-4">
               <h2 className="text-[10px] font-mono uppercase tracking-[0.3em] text-accent">Links</h2>
