@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { Section } from "./Section";
-import { MapPin, BadgeCheck, Briefcase, Github, Terminal, X, ChevronRight } from "lucide-react";
+import { MapPin, BadgeCheck, GraduationCap, Terminal, X, ChevronRight, RefreshCw, Share2, Check } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useTheme } from "../contexts/ThemeContext";
 
@@ -14,7 +14,14 @@ export const Hero = () => {
   const { theme, toggleTheme } = useTheme();
   const [activeModal, setActiveModal] = useState<null | 'cli'>(null);
   const [isMounted, setIsMounted] = useState(false);
-  
+  const [copied, setCopied] = useState(false);
+
+  const handleShare = () => {
+    navigator.clipboard.writeText(window.location.origin);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   // Terminal Emulator State
   const [terminalHistory, setTerminalHistory] = useState<TerminalLine[]>([
     { type: 'output', text: 'ANGHELO DEARROZ [anghelodearroz.me] (zsh)' },
@@ -23,7 +30,7 @@ export const Hero = () => {
     { type: 'output', text: '' },
   ]);
   const [terminalInput, setTerminalInput] = useState('');
-  
+
   const inputRef = useRef<HTMLInputElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -165,7 +172,6 @@ export const Hero = () => {
         animate="visible"
         className="flex flex-row items-stretch gap-4 sm:gap-6 md:gap-8 mb-8 md:mb-12"
       >
-        {/* Left Container: Profile Image (Flips on theme toggle) */}
         <motion.div
           variants={itemVariants}
           className="relative w-20 sm:w-24 md:w-32 lg:w-40 aspect-square shrink-0 group self-center md:self-auto"
@@ -175,8 +181,8 @@ export const Hero = () => {
           <motion.div
             className="w-full h-full relative cursor-pointer"
             animate={{ rotateY: theme === "light" ? 180 : 0 }}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.96 }}
             transition={{ duration: 0.6, type: "spring", stiffness: 260, damping: 20 }}
             style={{ transformStyle: "preserve-3d" }}
           >
@@ -212,6 +218,14 @@ export const Hero = () => {
               />
             </div>
           </motion.div>
+
+          {/* Permanent Floating Action Indicator (FAB) */}
+          <div
+            className="absolute -bottom-1.5 -right-1.5 bg-fg text-bg border border-border p-1.5 rounded-full shadow-md z-20 flex items-center justify-center cursor-pointer transition-transform duration-300 group-hover:scale-110 active:scale-95"
+            title="Click to flip theme"
+          >
+            <RefreshCw className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-bg animate-[spin_10s_linear_infinite]" />
+          </div>
         </motion.div>
 
         {/* Right Container: Details Column (Vertically distributed to match the photo's height exactly like a banner on all screen sizes) */}
@@ -254,22 +268,19 @@ export const Hero = () => {
             variants={itemVariants}
             className="flex flex-row items-center gap-1.5 sm:gap-3 w-full mt-0.5 md:mt-0 select-none"
           >
-            {/* Button 1: Solid Projects (Decorative badge) */}
-            <div className="bg-fg text-bg px-2 sm:px-5 py-1 sm:py-2 rounded-sm text-[8px] sm:text-xs font-mono uppercase tracking-wider flex items-center justify-between gap-1 sm:gap-3 min-w-[70px] sm:min-w-[120px] md:min-w-[160px]">
+            {/* Button 1: Solid Background (Black in light mode, White in dark mode) */}
+            <button
+              onClick={() => setActiveModal('background')}
+              className="bg-fg text-bg hover:opacity-90 transition-opacity px-2 sm:px-4 py-1 sm:py-2 rounded-sm text-[8px] sm:text-xs font-mono uppercase tracking-wider flex items-center justify-between gap-1 sm:gap-2.5 min-w-[70px] sm:min-w-[100px] md:min-w-[120px] font-bold cursor-pointer"
+            >
               <div className="flex items-center gap-1 sm:gap-2">
-                <Briefcase className="w-3 sm:w-4 h-3 sm:h-4 shrink-0" />
-                <span>Projects</span>
+                <GraduationCap className="w-3 sm:w-4 h-3 sm:h-4 shrink-0" />
+                <span>Background</span>
               </div>
               <ChevronRight className="w-3 sm:w-4 h-3 sm:h-4 shrink-0 opacity-60" />
-            </div>
+            </button>
 
-            {/* Button 2: Outline - GitHub (Decorative badge) */}
-            <div className="border border-border bg-surface/20 text-fg px-2 sm:px-5 py-1 sm:py-2 rounded-sm text-[8px] sm:text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-1 sm:gap-2">
-              <Github className="w-3 sm:w-4 h-3 sm:h-4 shrink-0 mr-1" />
-              <span>GitHub</span>
-            </div>
-
-            {/* Button 3: Outline - CLI (Fully functional interactive console modal) */}
+            {/* Button 2: Outline - CLI */}
             <button
               onClick={() => setActiveModal('cli')}
               className="border border-border bg-surface/20 text-fg hover:bg-surface/40 transition-colors px-2 sm:px-5 py-1 sm:py-2 rounded-sm text-[8px] sm:text-xs font-mono uppercase tracking-wider flex items-center justify-between gap-1 sm:gap-3 cursor-pointer sm:flex-grow-0 sm:max-w-[200px]"
@@ -280,6 +291,24 @@ export const Hero = () => {
               </div>
               <ChevronRight className="w-3 sm:w-4 h-3 sm:h-4 shrink-0 opacity-60" />
             </button>
+
+            {/* Button 3: Outline - Share */}
+            <button
+              onClick={handleShare}
+              className="border border-border bg-surface/20 text-fg hover:bg-surface/40 transition-colors px-2 sm:px-5 py-1 sm:py-2 rounded-sm text-[8px] sm:text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-1 sm:gap-2 cursor-pointer min-w-[75px] sm:min-w-[100px]"
+            >
+              {copied ? (
+                <>
+                  <Check className="w-3 sm:w-4 h-3 sm:h-4 shrink-0 mr-1 text-accent" />
+                  <span className="text-accent">Copied!</span>
+                </>
+              ) : (
+                <>
+                  <Share2 className="w-3 sm:w-4 h-3 sm:h-4 shrink-0 mr-1" />
+                  <span>Share</span>
+                </>
+              )}
+            </button>
           </motion.div>
         </div>
       </motion.div>
@@ -287,6 +316,104 @@ export const Hero = () => {
       {/* Render modal in portal directly on document.body, keeping AnimatePresence intact */}
       {isMounted && createPortal(
         <AnimatePresence>
+          {activeModal === 'background' && (
+            <motion.div
+              key="bg-modal-backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setActiveModal(null)}
+              className="fixed inset-0 bg-fg/10 backdrop-blur-sm z-[99999] flex items-center justify-center p-4 cursor-pointer"
+            >
+              <motion.div
+                key="bg-modal-container"
+                initial={{ scale: 0.95, y: 15, opacity: 0 }}
+                animate={{ scale: 1, y: 0, opacity: 1 }}
+                exit={{ scale: 0.95, y: 15, opacity: 0 }}
+                transition={{ type: "spring", duration: 0.5, bounce: 0.15 }}
+                onClick={(e) => e.stopPropagation()}
+                className="bg-bg border border-border shadow-2xl w-full max-w-md overflow-hidden text-left relative"
+              >
+                {/* Header */}
+                <div className="px-6 pt-6 pb-4 border-b border-border flex items-start justify-between">
+                  <div>
+                    <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-fg-muted mb-1">Profile</p>
+                    <h2 className="text-lg font-serif text-fg leading-tight">Anghelo Dearroz</h2>
+                    <p className="text-xs font-mono text-fg-muted mt-0.5">Batangas City, Philippines</p>
+                  </div>
+                  <button
+                    onClick={() => setActiveModal(null)}
+                    className="text-fg-muted hover:text-fg transition-colors cursor-pointer mt-0.5"
+                    aria-label="Close"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                </div>
+
+                {/* Timeline */}
+                <div className="px-6 py-6">
+                  <div className="relative">
+                    {/* Vertical connector line */}
+                    <div className="absolute left-[6px] top-3 bottom-3 w-px bg-border" />
+
+                    <div className="space-y-7">
+                      {[
+                        {
+                          year: "2003",
+                          label: "Born",
+                          detail: "Batangas City, Philippines",
+                          accent: true,
+                        },
+                        {
+                          year: "2019",
+                          label: "High School Graduate",
+                          detail: "Completed secondary education",
+                          accent: false,
+                        },
+                        {
+                          year: "2022",
+                          label: "Senior High School",
+                          detail: "STI College · STEM Strand",
+                          accent: false,
+                        },
+                        {
+                          year: "2026",
+                          label: "College Graduate",
+                          detail: "Batangas State University · BS Information Technology · Network Technology",
+                          accent: false,
+                        },
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-start gap-4">
+                          {/* Square dot */}
+                          <div className={`relative z-10 mt-[5px] w-3 h-3 shrink-0 border ${item.accent
+                              ? "bg-accent border-accent"
+                              : "bg-bg border-border"
+                            }`} />
+                          {/* Content */}
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-baseline gap-2 flex-wrap">
+                              <span className="text-[10px] font-mono text-fg-muted tracking-widest shrink-0">{item.year}</span>
+                              <span className="text-sm text-fg font-medium">{item.label}</span>
+                            </div>
+                            <p className="text-[11px] font-mono text-fg-muted mt-0.5 leading-relaxed">{item.detail}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Footer */}
+                <div className="px-6 pb-5 pt-2 border-t border-border">
+                  <p className="text-[10px] font-mono text-fg-muted uppercase tracking-[0.15em]">
+                    BS IT · Network Technology
+                  </p>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+
+
           {activeModal === 'cli' && (
             <motion.div
               key="cli-modal-backdrop"
@@ -310,7 +437,7 @@ export const Hero = () => {
                 <div className="bg-[#161b22] px-4 py-3 border-b border-[#21262d] flex items-center justify-between select-none relative">
                   {/* Left: Window controls */}
                   <div className="flex items-center gap-1.5 z-10">
-                    <button 
+                    <button
                       onClick={() => setActiveModal(null)}
                       className="w-3 h-3 rounded-full bg-[#ff5f56] border border-[#e0443e] hover:bg-[#ff5f56]/80 flex items-center justify-center group cursor-pointer"
                       aria-label="Close Terminal"
@@ -334,7 +461,7 @@ export const Hero = () => {
                 </div>
 
                 {/* Terminal Body */}
-                <div 
+                <div
                   ref={scrollRef}
                   onClick={() => inputRef.current?.focus()}
                   className="p-4 h-[350px] overflow-y-auto space-y-2 select-text scrollbar-thin scrollbar-thumb-neutral-800 scrollbar-track-transparent bg-[#0c0f16] cursor-text"
@@ -354,13 +481,13 @@ export const Hero = () => {
                       }
                     }
                     return (
-                      <div 
-                        key={idx} 
+                      <div
+                        key={idx}
                         className={
                           line.type === 'error' ? 'text-rose-400 font-medium' :
-                          line.type === 'success' ? 'text-emerald-400 font-medium' :
-                          line.type === 'input' ? 'text-white font-medium' :
-                          'text-[#c9d1d9]'
+                            line.type === 'success' ? 'text-emerald-400 font-medium' :
+                              line.type === 'input' ? 'text-white font-medium' :
+                                'text-[#c9d1d9]'
                         }
                         style={{ whiteSpace: 'pre-wrap' }}
                       >
@@ -370,12 +497,12 @@ export const Hero = () => {
                   })}
 
                   {/* Live Inline Input Line */}
-                  <form 
+                  <form
                     onSubmit={handleTerminalSubmit}
                     className="flex items-center gap-2 font-mono text-[11px] sm:text-xs pt-1"
                   >
                     <span className="text-emerald-500 font-bold shrink-0">guest@anghelo:~$</span>
-                    <input 
+                    <input
                       ref={inputRef}
                       type="text"
                       value={terminalInput}
