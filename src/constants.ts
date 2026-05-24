@@ -26,13 +26,15 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "3",
-    title: "DevGuideAI",
+    title: "DevGuide AI",
     image: "/images/devguideai.webp",
-    tags: ["LLM", "Next.js", "AI"],
-    description: "An AI-powered mentor that provides personalized learning paths and automated code reviews for software engineers.",
-    fullDescription: "DevGuideAI leverages Gemini 1.5 Pro to analyze GitHub repositories and suggest improvements based on standard design patterns. It generates a roadmap for junior developers to reach senior-level competency in specific tech stacks by identifying gaps in their current coding style.",
-    githubLink: "https://github.com/example/devguide-ai",
-    link: "#"
+    tags: ["RAG", "FastAPI", "pgvector", "Python", "Gemini", "Next.js"],
+    description: "An AI-powered codebase analysis platform that lets developers upload GitHub repositories and interact with them through natural-language questions.",
+    fullDescription: "DevGuide AI is an AI-powered codebase analysis platform that enables developers to upload GitHub repositories through ZIP files and interact with the project using natural-language questions. The system uses Retrieval-Augmented Generation (RAG) to parse repositories, generate embeddings, retrieve semantically relevant code snippets, and provide contextual explanations that help developers quickly understand unfamiliar or complex codebases.",
+    githubLink: "https://github.com/AngheloDeArroz/DevGuideAI",
+    link: "#",
+    platforms: ["Web App"],
+    technicalChallenge: "The project required handling large and structurally different repositories while maintaining accurate semantic retrieval across multiple programming languages and file formats. Repository parsing involved recursively extracting files, chunking source code intelligently to preserve context, generating embeddings locally using sentence-transformers, and storing vectors efficiently in PostgreSQL with pgvector for similarity search. The retrieval pipeline also needed to balance embedding relevance, chunk size, and prompt context limits to improve Gemini-generated responses without introducing hallucinations or unrelated snippets. On the frontend, asynchronous upload progress, background indexing, and conversational query handling had to remain responsive while coordinating with FastAPI APIs and real-time retrieval workflows."
   },
   {
     id: "4",
@@ -51,11 +53,13 @@ export const PROJECTS: Project[] = [
     id: "5",
     title: "Chat-pdf",
     image: "/images/chatpdf.webp",
-    tags: ["Python", "OpenAI", "NLP"],
-    description: "An intelligent document interaction tool that allows users to query and summarize large PDF documents using natural language.",
-    fullDescription: "Chat-pdf uses RAG (Retrieval-Augmented Generation) to process thousands of pages across multiple PDF files. It uses Pinecone for vector storage and OpenAI's GPT-4 for high-fidelity responses. It's built to handle complex legal and technical documentation where context is everything.",
-    githubLink: "https://github.com/example/chat-pdf",
-    link: "#"
+    tags: ["RAG", "pgvector", "Python", "sentence-transformers", "FastAPI"],
+    description: "A full-stack semantic PDF search platform that lets users upload documents and ask natural-language questions to instantly retrieve exact excerpts with page references.",
+    fullDescription: "Chat-pdf is a full-stack semantic PDF search platform that allows users to upload PDF documents, ask questions in natural language, and instantly retrieve exact excerpts with page references. The system uses local sentence embeddings and vector similarity search to provide fast and privacy-focused semantic retrieval without relying on external APIs or large language models.",
+    githubLink: "https://github.com/AngheloDeArroz/ChatPDF",
+    link: "#",
+    platforms: ["Web App"],
+    technicalChallenge: "The project required building an efficient semantic retrieval pipeline capable of processing large PDF documents while preserving contextual accuracy across fragmented text chunks. PDF extraction introduced inconsistencies in formatting, spacing, and page structures, requiring custom chunking logic to maintain meaningful semantic boundaries before generating embeddings with sentence-transformers. The backend also needed optimized vector indexing and similarity querying using PostgreSQL with pgvector to ensure low-latency searches even with thousands of embedded chunks. On the frontend, synchronizing semantic search results with the PDF viewer required accurate page mapping, responsive rendering, and seamless navigation between retrieved excerpts and their exact document locations without interrupting the reading experience."
   }
 ];
 
