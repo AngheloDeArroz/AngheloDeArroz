@@ -174,7 +174,7 @@ export const Hero = () => {
       >
         <motion.div
           variants={itemVariants}
-          className="relative w-20 sm:w-24 md:w-32 lg:w-40 aspect-square shrink-0 group self-center md:self-auto cursor-pointer select-none"
+          className="relative w-20 sm:w-24 md:w-32 lg:w-40 shrink-0 group cursor-pointer select-none"
           onClick={toggleTheme}
           title="Click to switch theme"
           style={{ perspective: 1000 }}
@@ -224,7 +224,7 @@ export const Hero = () => {
         </motion.div>
 
         {/* Right Container: Details Column (Vertically distributed to match the photo's height exactly like a banner on all screen sizes) */}
-        <div className="flex flex-col justify-between h-20 sm:h-24 md:h-32 lg:h-40 flex-grow min-w-0 w-full py-0.5">
+        <div className="flex flex-col justify-between min-h-20 sm:min-h-24 md:min-h-32 lg:min-h-40 flex-grow min-w-0 w-full py-0.5">
           {/* Row 1: Name */}
           <motion.h1
             variants={itemVariants}
@@ -270,7 +270,7 @@ export const Hero = () => {
             >
               <div className="flex items-center gap-1 sm:gap-2">
                 <GraduationCap className="w-3 sm:w-4 h-3 sm:h-4 shrink-0" />
-                <span>Background</span>
+                <span>Info</span>
               </div>
               <ChevronRight className="w-3 sm:w-4 h-3 sm:h-4 shrink-0 opacity-60" />
             </button>
