@@ -179,11 +179,7 @@ export const Hero = () => {
           title="Click to switch theme"
           style={{ perspective: 1000 }}
         >
-          {/* Accent-colored corner brackets highlighting interactability */}
-          <div className="absolute -top-1 -left-1 w-2.5 h-2.5 border-t-2 border-l-2 border-fg-muted/30 group-hover:border-accent transition-colors duration-300 pointer-events-none" />
-          <div className="absolute -top-1 -right-1 w-2.5 h-2.5 border-t-2 border-r-2 border-fg-muted/30 group-hover:border-accent transition-colors duration-300 pointer-events-none" />
-          <div className="absolute -bottom-1 -left-1 w-2.5 h-2.5 border-b-2 border-l-2 border-fg-muted/30 group-hover:border-accent transition-colors duration-300 pointer-events-none" />
-          <div className="absolute -bottom-1 -right-1 w-2.5 h-2.5 border-b-2 border-r-2 border-fg-muted/30 group-hover:border-accent transition-colors duration-300 pointer-events-none" />
+
 
           <motion.div
             className="w-full h-full relative"
