@@ -11,7 +11,11 @@ export const ProjectDetail = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+    document.title = `${project.title} — Anghelo Dearroz`;
+    return () => {
+      document.title = "Anghelo Dearroz — Full Stack Developer & Cloud Engineer";
+    };
+  }, [project.title]);
 
   if (!project) {
     return (
